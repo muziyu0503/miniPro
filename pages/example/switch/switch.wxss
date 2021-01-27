@@ -1,0 +1,9 @@
+/* pages/example/switch/switch.wxss */
+.switch-on{
+  background: red!important;
+  border: 0.5px solid red!important;
+}
+.switch-off{
+  background: blue!important;
+  border: 0.5px solid blue!important;
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "l-cut-picture": "./../../../component/cut-picture/cut-picture"
+  }
+}

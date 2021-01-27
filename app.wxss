@@ -1,0 +1,9 @@
+/**app.wxss**/
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-size: 30rpx;
+  padding: 20rpx 16rpx;
+  border-bottom: 1rpx solid #ddd;
+}

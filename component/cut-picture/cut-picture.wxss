@@ -1,0 +1,28 @@
+.cropper-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  
+  background:rgba(0, 0, 0, 0.8);
+}
+.cropper{
+  position: absolute;
+  top: 0;
+  bottom: 200rpx;
+  margin: auto;
+}
+
+.operation-btn-wrapper{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 200rpx;
+  background:rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+/* components/my-switch/my-switch.wxss */
+.remind-btn{
+  width:74rpx;
+  height:34rpx;
+  border-radius:18rpx;
+  position: relative;
+  /* box-sizing: border-box; */
+  margin-left: 10rpx;
+  overflow: hidden;
+  transition: background .3s;
+  background: #e0e0e0;
+  border: 0.5px solid #e0e0e0;
+}
+.remind-btn > view{
+  width:34rpx;
+  height:34rpx;
+  /* background:linear-gradient(143deg,rgba(122,164,255,1),rgba(41,108,255,1)); */
+  background: #fff;
+  border-radius:50%;
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+  transition: left .3s;
+}
+/* .remind-btn.off, .out-class{
+  background: #e0e0e0;
+  border: 0.5px solid #e0e0e0;
+} */
+.remind-btn.on{
+  background: #302F2B;
+  border: 0.5px solid #302F2B;
+}
+.remind-btn > view.on{
+  left: 41rpx;
+}
+.remind-btn > view.off{
+  left: 0rpx;
+}

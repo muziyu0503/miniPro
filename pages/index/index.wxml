@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="flex" bindtap="jump" data-url="switch">
+<text>开关状态切换</text>
+<l-switch on="{{false}}"></l-switch>
+</view>
+<view class="flex" bindtap="jump" data-url="cut-picture">
+<text>图片裁剪</text>
+<text>示例</text>
+</view>

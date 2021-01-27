@@ -1,0 +1,3 @@
+<!--pages/example/cut-picture/cut-picture.wxml-->
+<view bindtap="chooseimgs">上传</view>
+<l-cut-picture cutShow="{{cutShow}}" cutSize="{{cutSize}}" upImg="{{upImg}}" bindcutOk="fnCutOk"></l-cut-picture>

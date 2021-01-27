@@ -1,0 +1,13 @@
+<!--pages/example/switch/switch.wxml-->
+<view class="flex">
+<text>默认关</text>
+<l-switch on="{{false}}" bindchange="onChange"></l-switch>
+</view>
+<view class="flex">
+<text>默认开</text>
+<l-switch on="{{true}}" bindchange="onChange"></l-switch>
+</view>
+<view class="flex">
+<text>自定义颜色</text>
+<l-switch on="{{false}}" out-switch-on="switch-on" out-switch-off="switch-off" bindchange="onChange"></l-switch>
+</view>

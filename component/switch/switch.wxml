@@ -1,0 +1,4 @@
+<!--components/my-switch/my-switch.wxml ^test-calss -->
+<view class='remind-btn {{on ? "on out-switch-on": "off out-switch-off"}}' catchtap='openRemind'>
+  <view class="{{on ? 'on' : 'off'}}"></view>
+</view>

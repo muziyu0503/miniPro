@@ -1,0 +1,9 @@
+<!--component/cut-picture/cut-picture.wxml-->
+<view class="cropper-wrapper" hidden="{{!cutShow}}">
+    <canvas class="cropper" disable-scroll="{{true}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style="width:{{cropperOpt.width}}px;height:{{cropperOpt.height}}px;" canvas-id="{{cropperOpt.id}}">
+    </canvas>
+    <view class='operation-btn-wrapper'>
+      <view class='operation-btn' bindtap="chooseimgs">重新选择</view>
+      <view class='operation-btn' bindtap="getCropperImage">确定</view>
+  </view>
+  </view>
