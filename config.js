@@ -3,7 +3,7 @@ const config = {
  // domain: 'https://exapi.jxbscbd.com/',
  
   // 测试地址
-  domain: 'https://api.benz.clin.wang/v2/api-docs/',
+  domain: 'http://api.benz.clin.wang/',
 
   appid: 'wxb3ebe6b7dfbcb771'
 }

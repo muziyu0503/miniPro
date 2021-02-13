@@ -31,7 +31,7 @@ class HTTP {
       success (res) {
         const code = res.statusCode.toString() // 请求状态码
         if (code.startsWith('2')) {
-          if (res.data.code !== '200' && !notVerification) {
+          if (res.data.status !== 200 && !notVerification) {
             // 需要统一的错误处理
             const errorMsg = res.data.msg || res.data.errorMsg || '抱歉！服务器有点忙'
             wx.showToast({
@@ -43,7 +43,6 @@ class HTTP {
           resolve(res.data)
         } else {
           //处理异常
-          if (!res.data.success) {
           const errorMsg = res.data.msg || res.data.errorMsg || '抱歉！服务器有点忙'
           if(!notVerification){
             wx.showToast({
@@ -52,15 +51,12 @@ class HTTP {
               duration: 2000,
             });
           }
-          if (res.data.code == '406' || res.data.code == '401') {
-            wx.removeStorageSync('VIP-openinfo')
-            wx.removeStorageSync('VIP-userInfo')
+          if (res.data.code == '403') {
             wx.navigateTo({
               url: '/pages/userlogin/userlogin',
             })
           }
           reject(res.data)
-        }
        }
       },
       fail: (err) => {
@@ -74,7 +70,7 @@ class HTTP {
       complete: () => {
       }
     }
-    !notNeedAuthor && (obj.header.Authorization = wx.getStorageSync('VIP-openinfo').Authorization || '') // 不需要token
+    !notNeedAuthor && (obj.header.Authorization = wx.getStorageSync('openinfo').Authorization || '') // 不需要token
     wx.request(obj)
   }
 }

@@ -4,9 +4,9 @@
     <swiper class="swiper" autoplay indicator-dots
     indicator-active-color='#ffffff'
      indicator-color='#000000'>
-      <block wx:for="{{background}}" wx:key="*this">
+      <block wx:for="{{background}}" wx:key="index">
         <swiper-item>
-          <image mode='widthFix' src='{{item.url}}'></image>
+          <image mode='widthFix' src='http://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/banner/p{{index + 1}}.jpg'></image>
         </swiper-item>
       </block>
     </swiper>
@@ -26,11 +26,11 @@
       <view>查看全部 ></view>
     </view>
     <view class="row">
-      <view class="item" wx:for="rankList" wx:key='*this'
+      <view class="item" wx:for="{{rankList}}" wx:key='*this'
       bindtap="toDetail" data-id='1'>
-        <image src='https://modao.cc/uploads4/images/4798/47982481/v2_q9lyv8.png'></image>
-        <view>肌肉科技白金肌肉科技白金肌肉科技白金肌肉科技白金肌肉科技白金肌肉科技白金</view>
-        <text>999 积分</text>
+        <image src='{{item.banner[0]}}'></image>
+        <view>{{item.name}}</view>
+        <text>{{item.points}} 积分</text>
       </view>
     </view>
   </scroll-view>

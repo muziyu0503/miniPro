@@ -1,17 +1,35 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+import { Main } from "../../model/main.js";
+let main = new Main()
 Page({
   data: {
-    background: [
-      {url:'https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg'},
-      {url:'https://modao.cc/uploads4/images/6055/60557627/v2_qnjhz4.jpg'},
-      {url:'https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg'},
-    ],
+    background: new Array(3),
     rankList:[
       {},{},{},{},{},{},{}
     ]
+  },
+  pageNum: 1,
+  pageSize: 10,
+  onLoad: function () {
+    this.goodList()
+  },
+  // 获取商城列表
+  async goodList () {
+    let params = {
+      pageNum: 1,
+      pageSize: 6
+    }
+    let res = await main.goodslist(params)
+    console.log('获取商城列表', res)
+    if (res.status == 200) {
+      console.log('获取商城列表', res)
+      this.setData({
+        rankList: res.data.list
+      })
+
+    }
   },
   toDetail(e){
     console.log(e)
@@ -37,9 +55,7 @@ Page({
       url: '/pages/rank/index'
     })
   },
-  onLoad: function () {
-   
-  },
+ 
   jump(e) {
     console.log(e.currentTarget.dataset.url)
     let url = e.currentTarget.dataset.url
