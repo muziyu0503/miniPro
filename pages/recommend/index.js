@@ -1,4 +1,7 @@
 // pages/recommend/index.js
+import { Main } from "../../model/main.js";
+let main = new Main()
+const app = getApp()
 Page({
 
   /**
@@ -7,6 +10,8 @@ Page({
   data: {
 
   },
+  pageNum: 1,
+  pageSize: 10,
   formSubmit(){
     console.log('提交表单')
   },
@@ -15,8 +20,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.recommendList()
   },
-
+  // 推荐列表
+  async recommendList () {
+    let params = {
+      pageNum: this.pageNum,
+      pageSize: this.pageSize
+    }
+    let res = await main.recommendlist(params)
+    if (res.code === '200') {
+      console.log('推荐列表', res)
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
