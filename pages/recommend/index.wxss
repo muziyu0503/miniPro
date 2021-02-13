@@ -1,0 +1,72 @@
+.box {
+  padding: 30rpx;
+}
+
+.input-cell {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  padding: 20rpx 32rpx;
+  overflow: hidden;
+  color: #323233;
+  font-size: 32rpx;
+  line-height: 28rpx;
+  background-color: #fff;
+}
+
+.input-cell label {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  flex: none;
+  box-sizing: border-box;
+  width: 150rpx;
+  margin-right: 24rpx;
+  font-size: 32rpx;
+  color: #646566;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.input-cell::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: ' ';
+  pointer-events: none;
+  right: 24rpx;
+  bottom: 0;
+  left: 24rpx;
+  border-bottom: 2rpx solid #ebedf0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.btn-area {
+  margin-top: 30rpx;
+}
+
+.title {
+  margin-top: 50rpx;
+  font-size: 30rpx;
+}
+
+.srcoll {
+  height: 53vh;
+}
+
+.srcoll view text {
+  display: inline-block;
+  text-align: center;
+  font-size: 26rpx;
+  width: 150rpx;
+}
+.srcoll view text:first-child{
+  text-align: left;
+}
+
+.srcoll view text:nth-child(3) {
+  width: 200rpx;
+}

@@ -1,0 +1,28 @@
+<view class="exchange">
+  <view class="tabs flex">
+    <view wx:for="{{tabsList}}" class="{{ active===item ?'on':''}}" id="{{item}}" bindtap="fnChangeTab">{{item}}</view>
+  </view>
+  <scroll-view class='scroll' scroll-y>
+    <view class="white-card mt30" wx:for="cardList">
+      <view class="date">
+        2021-01-10 17:42
+        <text>待兑换</text>
+      </view>
+      <view class="infos">
+        <image
+          src='https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg'>
+        </image>
+
+        <view>
+          <text>JUPTTEE智能健身动感单车蓝牙互联轻运动JUPTTEE智能健身动感单车蓝牙互联轻运动</text>
+          <view class="num">200 积分</view>
+        </view>
+      </view>
+      <view class="btn">
+        订单号: 123456789
+        <button>确认兑换</button>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>

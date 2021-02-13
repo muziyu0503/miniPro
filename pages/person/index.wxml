@@ -1,0 +1,51 @@
+<view class="person">
+  <view class="card">
+    <image
+      src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
+    </image>
+    <view class="name">
+      <view>Foron</view>
+      <text class='vip'>VIP</text>
+    </view>
+    <view class="right">
+      <view class="num">60</view>
+      <text>积分</text>
+      <view class="detail">积分明细</view>
+    </view>
+  </view>
+
+  <view class="h3">我的兑换</view>
+  <view class="white-card">
+    <view class="check" bindtap="toExchange">查看全部 ></view>
+    <view class="flex">
+      <view>
+        <image src="../../images/car.png" class="icon"></image>
+        <view>待兑换</view>
+      </view>
+      <view>
+        <image src="../../images/order.png" class="icon"></image>
+        <view>已兑换</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="h3">联系我们</view>
+
+  <view class="call-not">
+    <input type="text" placeholder="请输入销售姓名"/>
+    <button type="primary">确认</button>
+  </view>
+
+  <view class="white-card call">
+    <image
+      src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
+    </image>
+    <view>
+      <view><text>姓名:</text> 张三</view>
+      <view><text>职位: </text>营销经理</view>
+      <view><text>联系电话:</text> 15346466765</view>
+      <view><text>地址:</text> 重庆市江北区华新街龙湖春森彼岸三期五栋啊啊啊</view>
+    </view>
+  </view>
+</view>

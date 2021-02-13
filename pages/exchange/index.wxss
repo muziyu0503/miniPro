@@ -1,0 +1,90 @@
+.exchange {
+  padding: 30rpx;
+}
+
+.tabs view {
+  text-align: center;
+  padding-bottom: 10rpx;
+  width: 150rpx;
+}
+
+.tabs view.on {
+  border-bottom: 6rpx solid rgb(51, 51, 51);
+}
+
+.white-card {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border: 2rpx solid  rgb(0 0 0 / 40%);
+  box-shadow: rgb(0 0 0 / 40%) 0px 2px 6px 0px;
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-radius: 24rpx;
+}
+
+.mt30 {
+  margin-top: 30rpx;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(51, 51, 51, 0.8);
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid rgb(232 232 232);
+}
+
+.date text {
+  font-size: 32rpx;
+  color: rgb(238, 12, 12);
+}
+
+.infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.infos image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 20rpx;
+}
+
+.infos>view {
+  font-size: 28rpx;
+  padding-left: 30rpx;
+  flex: 2;
+}
+.infos>view text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.infos .num{
+  font-size: 32rpx;
+  color: rgb(238, 12, 12);
+  margin-top: 20rpx;
+  text-align: right;
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.btn button{
+  background: rgb(51, 51, 51);
+  color: #ffffff;
+  width: 260rpx;
+  margin: 0;
+}
+.btn button:active{
+  opacity: .75;
+}
+.scroll{
+  height: 89vh;
+}

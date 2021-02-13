@@ -1,9 +1,37 @@
 <!--index.wxml-->
-<view class="flex" bindtap="jump" data-url="switch">
-<text>开关状态切换</text>
-<l-switch on="{{false}}"></l-switch>
-</view>
-<view class="flex" bindtap="jump" data-url="cut-picture">
-<text>图片裁剪</text>
-<text>示例</text>
+<view class="containt">
+  <scroll-view scroll-y>
+    <swiper class="swiper" autoplay indicator-dots
+    indicator-active-color='#ffffff'
+     indicator-color='#000000'>
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image mode='widthFix' src='{{item.url}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="btn-block">
+      <view class="recommend" bindtap="toRecommend">
+        推荐有奖
+      </view>
+      <view class="btn">
+        <view bindtap="toH5">查看车型</view>
+        <view bindtap="toRank">积分排行榜</view>
+      </view>
+    </view>
+
+    <view class="rank-header">
+      <text>积分兑换</text>
+      <view>查看全部 ></view>
+    </view>
+    <view class="row">
+      <view class="item" wx:for="rankList" wx:key='*this'
+      bindtap="toDetail" data-id='1'>
+        <image src='https://modao.cc/uploads4/images/4798/47982481/v2_q9lyv8.png'></image>
+        <view>肌肉科技白金肌肉科技白金肌肉科技白金肌肉科技白金肌肉科技白金肌肉科技白金</view>
+        <text>999 积分</text>
+      </view>
+    </view>
+  </scroll-view>
 </view>

@@ -4,9 +4,39 @@ const app = getApp()
 
 Page({
   data: {
-   
+    background: [
+      {url:'https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg'},
+      {url:'https://modao.cc/uploads4/images/6055/60557627/v2_qnjhz4.jpg'},
+      {url:'https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg'},
+    ],
+    rankList:[
+      {},{},{},{},{},{},{}
+    ]
   },
-  
+  toDetail(e){
+    console.log(e)
+    wx.navigateTo({
+      url: '/pages/detail/index'
+    })
+  },
+  /**
+   * 跳转推荐页面
+   */
+  toRecommend(){
+    wx.navigateTo({
+      url: '/pages/recommend/index'
+    })
+  },
+  toH5(){
+    wx.navigateTo({
+      url: '/pages/H5/index'
+    })
+  },
+  toRank(){
+    wx.navigateTo({
+      url: '/pages/rank/index'
+    })
+  },
   onLoad: function () {
    
   },

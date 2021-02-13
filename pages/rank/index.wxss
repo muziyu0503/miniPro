@@ -1,0 +1,41 @@
+.rank{
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.rank>view,.item{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+.flex1
+.img
+.jifen{
+  flex: 1;
+}
+.flex2,
+.portrait{
+  flex: 2;
+}
+.rank>view view{
+  vertical-align: middle;
+}
+.item{
+  font-size: 24rpx;
+}
+.head{
+  margin-bottom: 20rpx;
+}
+.img image{
+  width: 40rpx;
+  height: 50rpx;
+  margin-left: 5rpx;
+  vertical-align: middle;
+}
+.portrait image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}

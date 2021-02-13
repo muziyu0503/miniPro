@@ -2,14 +2,47 @@
   "pages": [
     "pages/index/index",
     "pages/example/switch/switch",
-    "pages/example/cut-picture/cut-picture"
+    "pages/mall/index",
+    "pages/person/index",
+    "pages/recommend/index",
+    "pages/H5/index",
+    "pages/rank/index",
+    "pages/detail/index",
+    "pages/exchange/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF"
   },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#cdcdcd",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/mall.png",
+        "selectedIconPath": "images/mall-active.png",
+        "pagePath": "pages/mall/index",
+        "text": "商城"
+      },
+      {
+        "iconPath": "images/person.png",
+        "selectedIconPath": "images/person-active.png",
+        "pagePath": "pages/person/index",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {},
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

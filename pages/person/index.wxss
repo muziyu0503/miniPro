@@ -1,0 +1,127 @@
+.person {
+  padding: 30rpx;
+}
+
+.card {
+  width: 100%;
+  height: 250rpx;
+  background-color: rgb(51, 51, 51);
+  border-radius: 24rpx;
+  font-size: 28rpx;
+  text-align: center;
+  padding: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card image,
+.call image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 80rpx;
+}
+
+.name {
+  color: #ffffff;
+  font-size: 32rpx;
+  flex: 2;
+  text-align: left;
+  margin-left: 60rpx;
+}
+
+.vip {
+  color: rgba(242, 226, 174, 0.3);
+  font-size: 42rpx;
+  margin-top: 10rpx;
+}
+
+.card .right {
+  color: #ffffff;
+  margin-right: 30rpx;
+}
+
+.card .right .num {
+  font-size: 36rpx;
+}
+
+.card .right text {
+  font-size: 24rpx;
+}
+
+.card .right .detail {
+  font-size: 28rpx;
+}
+
+.h3 {
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  margin-top: 40rpx;
+}
+
+.white-card {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 40%) 0px 2px 6px 0px;
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-radius: 24rpx;
+}
+
+.check {
+  font-size: 26rpx;
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+
+.flex>view {
+  text-align: center;
+}
+
+.flex>view:last-child {
+  margin-left: 100rpx;
+}
+
+.icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.call {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  line-height: 1.5;
+}
+
+.call>view {
+  width: 400rpx;
+}
+
+.call>view text {
+  color: #676767;
+}
+.call-not {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.call-not input{
+  border: 2rpx solid #676767;
+  width: 400rpx;
+  padding: 15rpx 20rpx;
+  border-radius: 10rpx;
+}
+.call-not button{
+  width: 200rpx;
+  background-color: rgb(51, 51, 51);
+}
