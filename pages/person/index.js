@@ -11,6 +11,7 @@ Page({
     loginInfo: {
       imgUrl: 'https://h5static.oss-cn-shenzhen.aliyuncs.com/lapp/vip/header-default1.png'
     },
+    manager: ''
   },
 
   /**
@@ -55,6 +56,21 @@ Page({
     wx.navigateTo({
       url: '/pages/userlogin/userlogin'
     })
+  },
+  bindManagerValue (e) {
+    this.setData({
+      manager: e.detail.value
+    })
+  },
+  // 绑定销售经理
+  async bindManager () {
+    let params = {
+      account: this.data.manager
+    }
+    let res = await main.bindManager(params)
+    if (res.status == 200) {
+      console.log('绑定销售经理', res)
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

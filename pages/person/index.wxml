@@ -38,8 +38,8 @@
   <view class="h3">联系我们</view>
 
   <view class="call-not">
-    <input type="text" placeholder="请输入销售姓名"/>
-    <button type="primary">确认</button>
+    <input type="text" placeholder="请输入销售姓名" bindinput="bindManagerValue"/>
+    <button type="primary" bindtap="bindManager">确认</button>
   </view>
 
   <view class="white-card call">
