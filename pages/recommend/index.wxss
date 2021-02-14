@@ -70,3 +70,8 @@
 .srcoll view text:nth-child(3) {
   width: 200rpx;
 }
+.recommenditem {
+  align-items: center;
+  justify-content: space-between;
+  margin: 10rpx 0;
+}

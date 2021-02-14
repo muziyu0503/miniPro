@@ -8,7 +8,9 @@
     "pages/H5/index",
     "pages/rank/index",
     "pages/detail/index",
-    "pages/exchange/index"
+    "pages/exchange/index",
+    "pages/point-detail/point-detail",
+    "pages/userlogin/userlogin"
   ],
   "window": {
     "backgroundTextStyle": "light",

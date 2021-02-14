@@ -1,0 +1,38 @@
+/* pages/userlogin/userlogin.wxss */
+.infobox {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  flex-direction: column;
+  width: 72%;
+  margin: 0 auto;
+  padding-top: 170rpx;
+}
+.infobox .logobox {
+  width: 164rpx;
+  height: 164rpx;
+  border-radius: 50%;
+}
+.infobox .logobox .logo{
+  width: 164rpx;
+  height: 164rpx;
+  border-radius: 50%;
+}
+.infobox .tips {
+  font-size: 28rpx;
+  color: #010101;
+  line-height: 50rpx;
+  text-align: center;
+  margin: 44rpx auto 54rpx;
+}
+.infobox .gobtn {
+  width:340rpx;
+  height:90rpx;
+  background:rgba(41,108,255,1);
+  box-shadow:0rpx 0rpx 24rpx 0rpx rgba(41,108,255,0.55);
+  border-radius:45rpx;
+  color: white;
+  font-size:30rpx;
+  line-height: 90rpx;
+  padding: 0;
+}

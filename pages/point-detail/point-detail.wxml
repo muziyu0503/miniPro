@@ -1,0 +1,18 @@
+<!--pages/point-detail/point-detail.wxml-->
+<view class="wrap">
+ <view wx:for="{{pointList}}" wx:key="index" wx:for-item="arrItem" wx:for-index="arrIndex">
+   <view class="point-item dis-flex" wx:for="{{arrItem}}" wx:key='arrIndex'>
+    <view class="left">
+      <text>{{item.description}}</text>
+      <text>{{item.createTime}}</text>
+    </view>
+     <view class="right">
+      <text>{{item.type==0 ? '-' : '+'}}+{{item.points}}积分</text>
+    </view>
+  </view>
+ </view>
+  <view class="waiting_img" wx:if="{{pull_loading}}">
+    <image lazy-load="true" src="/images/waiting.gif"></image>
+  </view>
+  <view class='endTips' wx:if="{{pull_over}}">数据全部加载完成</view>
+</view>

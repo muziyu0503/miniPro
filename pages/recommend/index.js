@@ -8,7 +8,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    form: {
+      name: '',
+      car: '',
+      phone: ''
+    },
+    recommendList: []
   },
   pageNum: 1,
   pageSize: 10,
@@ -22,6 +27,24 @@ Page({
   onLoad: function (options) {
     this.recommendList()
   },
+  // 绑定姓名的值
+  bindnamevalue (e) {
+    this.setData({
+      'form.name': e.detail.value
+    })
+  },
+   // 绑定手机号的值
+   bindphonevalue (e) {
+    this.setData({
+      'form.phone': e.detail.value
+    })
+  },
+   // 绑定意向车型的值
+   bindcarvalue (e) {
+    this.setData({
+      'form.bindcarvalue': e.detail.value
+    })
+  },
   // 推荐列表
   async recommendList () {
     let params = {
@@ -29,8 +52,24 @@ Page({
       pageSize: this.pageSize
     }
     let res = await main.recommendlist(params)
-    if (res.code === '200') {
+    if (res.status === 200) {
       console.log('推荐列表', res)
+      this.setData({
+        recommendList: res.data.list
+      })
+    }
+  },
+  // 提交推荐
+  async submitOrder () {
+    let params = {
+      ...this.data.form
+    }
+    let res = await main.reportRecommend(params)
+    if (res.status === 200) {
+      wx.showToast({
+        title: '提交成功！',
+      })
+      this.recommendList()
     }
   },
   /**

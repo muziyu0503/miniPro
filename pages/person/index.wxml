@@ -3,15 +3,20 @@
     <image
       src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
     </image>
-    <view class="name">
-      <view>Foron</view>
-      <text class='vip'>VIP</text>
-    </view>
-    <view class="right">
-      <view class="num">60</view>
-      <text>积分</text>
-      <view class="detail">积分明细</view>
-    </view>
+    <block wx:if="{{loginInfo.id}}">
+      <view class="name">
+        <view>Foron</view>
+        <text class='vip'>VIP</text>
+      </view>
+      <view class="right">
+        <view class="num">60</view>
+        <text>积分</text>
+        <view class="detail" bindtap="jumpPointDetail">积分明细</view>
+      </view>
+    </block>
+    <block wx:else>
+      <view bindtap="jumpLogin" class="loginbtn">登录</view>
+    </block>
   </view>
 
   <view class="h3">我的兑换</view>

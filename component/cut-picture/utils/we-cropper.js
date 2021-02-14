@@ -316,7 +316,6 @@
   }
 
   function wxPromise(fn, pageTarget) {
-    console.log('33', this)
     return function (obj, pageTarget) {
       var args = [], len = arguments.length - 1;
       while (len-- > 0) args[len] = arguments[len + 1];

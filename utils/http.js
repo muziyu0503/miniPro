@@ -70,7 +70,7 @@ class HTTP {
       complete: () => {
       }
     }
-    !notNeedAuthor && (obj.header.Authorization = wx.getStorageSync('openinfo').Authorization || '') // 不需要token
+    !notNeedAuthor && (obj.header.Authorization = wx.getStorageSync('VIP-openinfo').token || '') // 不需要token
     wx.request(obj)
   }
 }

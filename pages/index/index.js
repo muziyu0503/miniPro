@@ -8,7 +8,8 @@ Page({
     background: new Array(3),
     rankList:[
       {},{},{},{},{},{},{}
-    ]
+    ],
+    loginInfo: null
   },
   pageNum: 1,
   pageSize: 10,
@@ -16,8 +17,14 @@ Page({
     this.goodList()
     this.getUserInfo()
   },
-  getUserInfo () {
-    app._loginAll()
+  async getUserInfo () {
+    let res = await app._loginAll()
+    console.log('getUserInfo', res)
+    if (res) {
+      this.setData({
+        loginInfo: app.globalData.loginInfo
+      })
+    }
   },
   // 获取商城列表
   async goodList () {
@@ -26,9 +33,8 @@ Page({
       pageSize: 6
     }
     let res = await main.goodslist(params)
-    console.log('获取商城列表', res)
     if (res.status == 200) {
-      console.log('获取商城列表', res)
+ 
       this.setData({
         rankList: res.data.list
       })
@@ -45,9 +51,13 @@ Page({
    * 跳转推荐页面
    */
   toRecommend(){
-    wx.navigateTo({
-      url: '/pages/recommend/index'
-    })
+    let res = app.isLogin()
+    console.log('res', res)
+    if (res) {
+      wx.navigateTo({
+        url: '/pages/recommend/index'
+      })
+    }
   },
   toH5(){
     wx.navigateTo({

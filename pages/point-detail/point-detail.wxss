@@ -1,0 +1,14 @@
+/* pages/point-detail/point-detail.wxss */
+.point-item {
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+.point-item .left text{
+  display: block;
+}
+.point-item .right text {
+  color: brown;
+  font-size: 36rpx;
+}
