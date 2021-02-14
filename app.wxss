@@ -6,3 +6,29 @@
   font-size: 30rpx;
   padding: 20rpx 16rpx;
 }
+.waiting_img {
+  text-align: center;
+  width:100%;
+  height:120rpx;
+}
+.waiting_img image{
+  width: 62rpx;
+  height: 63rpx;
+  text-align: center;
+}
+.endTips {
+  width: 100%;
+  color: #999;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 80rpx;
+}
+/* 公共布局 */
+.dis-flex {
+  display: flex;
+  display: -webkit-flex;
+}
+.dis-flex-center {
+  justify-content: center;
+  align-items: center;
+}

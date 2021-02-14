@@ -6,13 +6,34 @@
   align-items: center;
   border-radius: 50rpx;
   font-size: 28rpx;
+  padding-right: 34rpx;
+  box-sizing: border-box;
 }
-
+button {
+  padding: 0;
+  margin: 0;
+}
+.search .searchbtn {
+  width: 100rpx;
+  height: 70rpx;
+  background: #5cadff;
+  color: #ffffff;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+}
+.search input {
+  flex: 1;
+}
+.searchbox {
+  height: 80rpx;
+}
 .search image {
   width: 50rpx;
   height: 50rpx;
 }
-
+.search-fixed {
+  position: fixed;
+}
 .mall {
   padding: 30rpx;
 }

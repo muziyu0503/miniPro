@@ -28,7 +28,7 @@ Page({
       pageNum: this.pageNum,
       pageSize: this.pageSize
     }
-    let res = await main.goodslist(params)
+    let res = await main.recommendlist(params)
     if (res.code === '200') {
       console.log('推荐列表', res)
     }

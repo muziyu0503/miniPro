@@ -14,6 +14,10 @@ Page({
   pageSize: 10,
   onLoad: function () {
     this.goodList()
+    this.getUserInfo()
+  },
+  getUserInfo () {
+    app._loginAll()
   },
   // 获取商城列表
   async goodList () {
