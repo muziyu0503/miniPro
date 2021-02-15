@@ -28,7 +28,6 @@ Page({
     wx.navigateTo({
       url: '/pages/detail/index'
     })
-    debugger
     wx.setStorageSync('details', this.data.goodList[index[0]][index[1]])
   },
   async getGoodList () {

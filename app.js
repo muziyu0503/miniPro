@@ -103,7 +103,7 @@ App({
     let params = {
       encryptedData: wxUserData.encryptedData,
       iv: wxUserData.iv,
-      rawData: wxUserData.rawData,
+      rawData: JSON.parse(wxUserData.rawData),
       sessionKey: this.globalData.openIdInfo.sessionKey,
       signature: wxUserData.signature
     }
