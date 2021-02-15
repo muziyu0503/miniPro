@@ -64,9 +64,13 @@ Page({
     })
   },
   toRank (){
-    wx.navigateTo({
-      url: '/pages/rank/index'
-    })
+    let res = app.isLogin()
+    console.log('res', res)
+    if (res) {
+      wx.navigateTo({
+        url: '/pages/rank/index'
+      })
+    }
   },
   toMall (){
     wx.switchTab({

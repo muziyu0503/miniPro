@@ -23,7 +23,7 @@ Page({
     wx.setNavigationBarTitle({
       title: '个人中心'
     })
-    this.getUserInfo()
+   
     
   },
   async getUserInfo () {
@@ -35,8 +35,6 @@ Page({
       })
       if (this.data.loginInfo.id) {
         this.getUserPoint()
-        
-        
       }
     }
   },
@@ -110,7 +108,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getUserInfo()
   },
 
   /**
