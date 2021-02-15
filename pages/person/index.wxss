@@ -68,6 +68,7 @@
   padding: 30rpx;
   box-sizing: border-box;
   border-radius: 24rpx;
+  position: relative;
 }
 
 .check {

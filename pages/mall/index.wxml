@@ -3,7 +3,7 @@
     <view class="search dis-flex {{isScroll ? 'search-fixed' : ''}}">
       <image src="../../images/search.png"></image>
       <input type='text' placeholder="请输入查找内容" confirm-type="search" bindinput="bindinputValue"/>
-      <view class="searchbtn dis-flex dis-flex-center" wx:if="{{keyWord.length>0}}" bindtap="searchGood">搜索</view>
+      <view class="searchbtn dis-flex dis-flex-center" bindtap="searchGood">搜索</view>
     </view>
   </view>
   <view class="row">

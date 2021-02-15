@@ -21,6 +21,7 @@
 
   <view class="h3">我的兑换</view>
   <view class="white-card">
+  <view class="opacityBtn" wx:if="{{!loginInfo || !loginInfo.id}}" bindtap="jumpLogin"></view>
     <view class="check" bindtap="toExchange" id='全部'>查看全部 ></view>
     <view class="flex">
       <view bindtap="toExchange" id='待兑换'>
@@ -35,12 +36,15 @@
   </view>
 
 
-  <view class="h3">联系我们</view>
+  <block wx:if="{{loginInfo && loginInfo.id}}">
+    <view class="h3">联系我们</view>
 
-  <view class="call-not"  wx:if="{{!loginInfo.staff}}">
-    <input type="text" placeholder="请输入销售姓名" bindinput="bindManagerValue"/>
-    <button type="primary" bindtap="fnSearch">查找</button>
-  </view>
+    <view class="call-not"  wx:if="{{!loginInfo.staff}}">
+      <input type="text" placeholder="请输入销售姓名" bindinput="bindManagerValue"/>
+      <button type="primary" bindtap="fnSearch">查找</button>
+    </view>
+  </block>
+ 
 
 
 
