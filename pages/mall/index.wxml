@@ -6,7 +6,7 @@
 			<view class="searchbtn dis-flex dis-flex-center" bindtap="searchGood">搜索</view>
 		</view>
 	</view>
-	<scroll-view class='row' scroll-y bindscrolltolower="tolower" bindscrolltoupper="toupper">
+	<scroll-view class='row' scroll-y bindscrolltolower="tolower" bindscrolltoupper="toupper" lower-threshold="100">
 		<view wx:for="{{goodList}}" wx:key="index" wx:for-item="arrItem" wx:for-index="arrIndex">
 			<view class="item" wx:for="{{arrItem}}" wx:key='arrIndex' bindtap="toDetail" data-id="{{index}},{{arrIndex}}">
 				<image src='{{item.img}}'></image>
