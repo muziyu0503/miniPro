@@ -1,9 +1,10 @@
 /* pages/point-detail/point-detail.wxss */
 .point-item {
-  padding: 0 30rpx;
+  padding: 20rpx 30rpx;
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #ccc;
 }
 .point-item .left text{
   display: block;

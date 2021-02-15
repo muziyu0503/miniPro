@@ -25,7 +25,8 @@ Page({
     this.pageNo = 1
     this.setData({
       pull_loading: false,
-      pull_over: false
+      pull_over: false,
+      goodList: []
     })
     this.getGoodList()
   },
