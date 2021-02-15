@@ -1,4 +1,4 @@
-// pages/recommend/index.js
+// pages/staffForm/staffForm.js
 import { Main } from "../../model/main.js";
 let main = new Main()
 const app = getApp()
@@ -10,22 +10,16 @@ Page({
   data: {
     form: {
       name: '',
-      car: '',
-      phone: ''
+      position: '',
+      mobile: ''
     },
-    recommendList: []
-  },
-  pageNum: 1,
-  pageSize: 10,
-  formSubmit(){
-    console.log('提交表单')
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.recommendList()
+
   },
   // 绑定姓名的值
   bindnamevalue (e) {
@@ -36,40 +30,25 @@ Page({
    // 绑定手机号的值
    bindphonevalue (e) {
     this.setData({
-      'form.phone': e.detail.value
+      'form.mobile': e.detail.value
     })
   },
    // 绑定意向车型的值
-   bindcarvalue (e) {
+   bindposvalue (e) {
     this.setData({
-      'form.car': e.detail.value
+      'form.position': e.detail.value
     })
   },
-  // 推荐列表
-  async recommendList () {
-    let params = {
-      pageNum: this.pageNum,
-      pageSize: this.pageSize
-    }
-    let res = await main.recommendlist(params)
-    if (res.status === 200) {
-      console.log('推荐列表', res)
-      this.setData({
-        recommendList: res.data.list
-      })
-    }
-  },
-  // 提交推荐
+  // 提交订单
   async submitOrder () {
     let params = {
       ...this.data.form
     }
-    let res = await main.reportRecommend(params)
+    let res = await main.bindStaff(params)
     if (res.status === 200) {
       wx.showToast({
         title: '提交成功！',
       })
-      this.recommendList()
     }
   },
   /**
@@ -83,9 +62,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.setNavigationBarTitle({
-      title: '推荐有礼'
-    })
+
   },
 
   /**

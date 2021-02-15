@@ -10,7 +10,8 @@
     "pages/detail/index",
     "pages/exchange/index",
     "pages/point-detail/point-detail",
-    "pages/userlogin/userlogin"
+    "pages/userlogin/userlogin",
+    "pages/staffForm/staffForm"
   ],
   "window": {
     "backgroundTextStyle": "light",

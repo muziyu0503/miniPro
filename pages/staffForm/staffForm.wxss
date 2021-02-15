@@ -1,0 +1,35 @@
+/* pages/staffForm/staffForm.wxss */
+.form {
+  flex-direction: column;
+  padding: 30rpx 40rpx;
+  box-sizing: border-box;
+}
+.title {
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+.content {
+  width: 100%;
+}
+.content .form-item {
+  height: 60rpx;
+  border: 1px solid #ccc;
+  margin-bottom: 20rpx;
+}
+.content .form-item input {
+  height: 100%;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+}
+.submitbtn {
+  text-align: center;
+  background: #5cadff;
+  color: #ffffff;
+  padding: 15rpx 50rpx;
+  box-sizing: border-box;
+  margin-bottom: 15rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  max-width: 200rpx;
+  margin: 0 auto;
+}
