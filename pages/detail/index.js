@@ -1,4 +1,6 @@
-// pages/detail/index.js
+const app = getApp()
+import { Main } from "../../model/main.js";
+let main = new Main()
 Page({
 
   /**
@@ -10,7 +12,15 @@ Page({
     }],
     details:{}
   },
-
+  fnExchange(){
+    let res = app.isLogin()
+    console.log('res', res)
+    if (res) {
+      wx.navigateTo({
+        url: '/pages/recommend/index'
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */

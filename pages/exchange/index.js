@@ -36,6 +36,9 @@ Page({
     wx.setNavigationBarTitle({
       title: '我的兑换'
     })
+    this.setData({
+      active: options.type
+    })
     this.getGoodList()
   },
   async getGoodList () {

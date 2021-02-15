@@ -63,6 +63,11 @@ Page({
       url: '/pages/H5/index'
     })
   },
+  toMall(){
+    wx.switchTab({
+      url: '/pages/mall/index'
+    })
+  },
   toRank(){
     wx.navigateTo({
       url: '/pages/rank/index'

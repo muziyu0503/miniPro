@@ -102,6 +102,7 @@
   justify-content: space-between;
   font-size: 24rpx;
   line-height: 1.5;
+  margin-bottom: 20rpx;
 }
 
 .call>view {
@@ -111,23 +112,38 @@
 .call>view text {
   color: #676767;
 }
+
 .call-not {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30rpx;
 }
-.call-not input{
+
+.call-not input {
   border: 2rpx solid #676767;
   width: 400rpx;
   padding: 15rpx 20rpx;
   border-radius: 10rpx;
 }
-.call-not button{
+
+.call-not button {
   width: 200rpx;
-  background-color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 2rpx solid rgb(51, 51, 51);
+  color: rgb(51, 51, 51);
 }
+
 .loginbtn {
   color: #fff;
   font-size: 40rpx;
   width: 100%;
+}
+
+.bind {
+  width: 100rpx !important;
+  padding: 0 !important;
+  color: #fff;
+  background-color: rgb(51, 51, 51);
+  margin: 0 !important;
+  float: right;
 }

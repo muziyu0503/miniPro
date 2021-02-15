@@ -10,4 +10,5 @@
   <view class="num">{{details.points}}积分</view>
   <view class="rule">兑换规则</view>
   <rich-text nodes="{{details.description}}"></rich-text>
+  <button class="change" bindtap="fnExchange">立即兑换</button>
 </view>

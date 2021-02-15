@@ -107,6 +107,13 @@ class Main extends HTTP {
       method: 'post'
     })
   }
+  staffList(data) { // 员工信息列表
+    return this.request({
+      url: config.domain + `/user/staff/list/${config.appid}`,
+      data,
+      method: 'get'
+    })
+  }
 }
 export { Main }
 

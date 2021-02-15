@@ -21,13 +21,13 @@
 
   <view class="h3">我的兑换</view>
   <view class="white-card">
-    <view class="check" bindtap="toExchange">查看全部 ></view>
+    <view class="check" bindtap="toExchange" id='全部'>查看全部 ></view>
     <view class="flex">
-      <view>
+      <view bindtap="toExchange" id='待兑换'>
         <image src="../../images/car.png" class="icon"></image>
         <view>待兑换</view>
       </view>
-      <view>
+      <view bindtap="toExchange" id='已兑换'>
         <image src="../../images/order.png" class="icon"></image>
         <view>已兑换</view>
       </view>
@@ -39,18 +39,19 @@
 
   <view class="call-not">
     <input type="text" placeholder="请输入销售姓名" bindinput="bindManagerValue"/>
-    <button type="primary" bindtap="bindManager">确认</button>
+    <button type="primary" bindtap="fnSearch">查找</button>
   </view>
 
-  <view class="white-card call">
+  <view class="white-card call" wx:for="{{staffList}}" wx:key='*this'>
     <image
       src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
     </image>
     <view>
-      <view><text>姓名:</text> 张三</view>
-      <view><text>职位: </text>营销经理</view>
-      <view><text>联系电话:</text> 15346466765</view>
-      <view><text>地址:</text> 重庆市江北区华新街龙湖春森彼岸三期五栋啊啊啊</view>
+      <view><text>姓名:</text> {{item.name}}</view>
+      <view><text>职位: </text>{{item.position}}</view>
+      <view><text>联系电话:</text> {{item.mobile}}</view>
+      <view><text>地址:</text> {{item.address}}</view>
+      <button class="bind" id="{{item.account}}" bindtap="bindManager">绑定</button>
     </view>
   </view>
 </view>

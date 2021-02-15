@@ -5,20 +5,19 @@
     <view class="flex1">积分</view>
   </view>
   <scroll-view scroll-y="">
-    <view class="item" wx:for="{{rankList}}" wx:key="index">
-    <view class="img" wx:if="{{index==0}}">
-      No.1<image  src="../../images/rank1.png"></image>
+    <view class="item" wx:for="{{rankList}}" wx:key="index" wx:if="{{rankList[0].length>0}}">
+      <view class="img" wx:if="{{index==0}}">
+        No.{{index+1}}<image src="../../images/rank{{index+1}}.png" wx:if="{{index<=2}}"></image>
+      </view>
+      <view class="img" wx:else>
+        No.{{index+1}}
+      </view>
+      <view class="portrait">
+        <image src="{{item.avatarUrl}}">
+        </image>
+        {{item.nickName}}
+      </view>
+      <view class="jifen">{{item.points}}积分</view>
     </view>
-    <view class="img" wx:else>
-      No.{{index+1}}
-    </view>
-    <view  class="portrait">
-      <image
-        src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
-      </image>
-      一只特地独行的猪
-    </view>
-    <view class="jifen">255积分</view>
-  </view>
   </scroll-view>
 </view>

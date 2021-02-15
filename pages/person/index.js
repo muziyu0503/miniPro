@@ -11,7 +11,8 @@ Page({
     loginInfo: {
       imgUrl: 'https://h5static.oss-cn-shenzhen.aliyuncs.com/lapp/vip/header-default1.png'
     },
-    manager: ''
+    manager: '',
+    staffList:[]
   },
 
   /**
@@ -36,12 +37,24 @@ Page({
   getUserPoint () {
     app.getUserPoint()
   },
+  async fnSearch(){
+    let res = await main.staffList({
+      name: this.data.manager,
+      pageSize: 100,
+      pageNum: 1
+    })
+    res = res.data
+    debugger
+    this.setData({
+      staffList: res.list
+    })
+  },
   /**
    * 跳转我的兑换
    */
-  toExchange() {
+  toExchange(e) {
     wx.navigateTo({
-      url: '/pages/exchange/index'
+      url: '/pages/exchange/index?type=' + e.currentTarget.id
     })
   },
   /**
@@ -63,13 +76,19 @@ Page({
     })
   },
   // 绑定销售经理
-  async bindManager () {
+   bindManager (event) {
     let params = {
-      account: this.data.manager
+      account: event.currentTarget.id
     }
-    let res = await main.bindManager(params)
+    this.bindRequest(params)
+  },
+  async bindRequest(params){
+   let res = await main.bindManager(params)
     if (res.status == 200) {
       console.log('绑定销售经理', res)
+      wx.showToast({
+        title:'绑定成功'
+      })
     }
   },
   /**
