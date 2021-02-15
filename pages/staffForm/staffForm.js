@@ -41,6 +41,13 @@ Page({
   },
   // 提交订单
   async submitOrder () {
+    if (this.data.form.mobile.length !== 11) {
+      wx.showToast({
+        title: '手机号格式错误',
+        icon: 'none'
+      })
+      return
+    }
     let params = {
       ...this.data.form
     }

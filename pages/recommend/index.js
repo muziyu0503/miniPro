@@ -61,6 +61,14 @@ Page({
   },
   // 提交推荐
   async submitOrder () {
+    console.log('this.data.form.phone', this.data.form.phone)
+    if (this.data.form.phone.length !== 11) {
+      wx.showToast({
+        title: '手机号格式错误',
+        icon: 'none'
+      })
+      return
+    }
     let params = {
       ...this.data.form
     }
