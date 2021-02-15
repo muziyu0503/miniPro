@@ -8,6 +8,7 @@
 }
 .point-item .left text{
   display: block;
+  margin: 10rpx 0;
 }
 .point-item .right text {
   color: brown;
