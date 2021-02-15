@@ -33,7 +33,7 @@ class HTTP {
         if (code.startsWith('2')) {
           if (res.data.status !== 200 && !notVerification) {
             // 需要统一的错误处理
-            const errorMsg = res.data.msg || res.data.errorMsg || '抱歉！服务器有点忙'
+            const errorMsg = res.data.message || '抱歉！服务器有点忙'
             wx.showToast({
               title: errorMsg,
               icon: 'none',
@@ -44,7 +44,7 @@ class HTTP {
         } else {
           console.log('处理异常res', res)
           //处理异常
-          const errorMsg = res.data.msg || res.data.errorMsg || '抱歉！服务器有点忙'
+          const errorMsg = res.data.message || '抱歉！服务器有点忙'
           if(!notVerification){
             wx.showToast({
               title: errorMsg,

@@ -11,7 +11,7 @@ Page({
     pull_loading: false,
     pull_over: false,
   },
-  pageNo: 1,
+  pageNum: 1,
   pageSize: 10,
   /**
    * 生命周期函数--监听页面加载
@@ -26,7 +26,7 @@ Page({
       })
     }
     let params = {
-      pageNo:this.pageNo,
+      pageNum:this.pageNum,
       pageSize: this.pageSize
     }
     let res = await main.pointslist(params)
@@ -35,9 +35,9 @@ Page({
     if (res.status == 200) {
       let tempData = res.data.list
       this.setData({
-        [`pointList[${this.pageNo - 1}]`]: tempData,
+        [`pointList[${this.pageNum - 1}]`]: tempData,
         pull_loading: false,
-        pull_over: this.pageNo * this.pageSize > parseInt(res.data.total)
+        pull_over: this.pageNum * this.pageSize > parseInt(res.data.total)
       })
       console.log('pull_over', this.data.pull_over)
     }
@@ -74,7 +74,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.pageNo = 1
+    this.pageNum = 1
     this.getPointList()
   },
 
@@ -84,7 +84,7 @@ Page({
   onReachBottom: function () {
     console.log('到达底部')
     if (!this.data.pull_over && !this.data.pull_loading) {
-      this.pageNo = this.pageNo + 1
+      this.pageNum = this.pageNum + 1
       this.getPointList()
     }
   },

@@ -14,7 +14,7 @@ Page({
     isScroll: false, // 页面已经滑动过
     keyWord: ''
   },
-  pageNo: 1,
+  pageNum: 1,
   pageSize: 10,
   /**
    * 生命周期函数--监听页面加载
@@ -37,7 +37,7 @@ Page({
       })
     }
     let params = {
-      pageNo:this.pageNo,
+      pageNum:this.pageNum,
       pageSize: this.pageSize
     }
     if (this.data.keyWord) {
@@ -49,9 +49,9 @@ Page({
     if (res.status == 200) {
       let tempData = res.data.list
       this.setData({
-        [`goodList[${this.pageNo - 1}]`]: tempData,
+        [`goodList[${this.pageNum - 1}]`]: tempData,
         pull_loading: false,
-        pull_over: this.pageNo * this.pageSize > parseInt(res.data.total)
+        pull_over: this.pageNum * this.pageSize > parseInt(res.data.total)
       })
     }
   },
@@ -82,7 +82,7 @@ Page({
   },
   // 搜索
   searchGood () {
-    this.pageNo = 1
+    this.pageNum = 1
     this.getGoodList()
   },
   /**
@@ -110,22 +110,22 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-   
+  
   },
   toupper () {
-    this.pageNo = 1
+    this.pageNum = 1
     this.getGoodList()
   },
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-   
+  
   },
   tolower () {
     console.log('到达底部')
     if (!this.data.pull_over && !this.data.pull_loading) {
-      this.pageNo = this.pageNo + 1
+      this.pageNum = this.pageNum + 1
       this.getGoodList()
     }
   },

@@ -1,7 +1,6 @@
 <view class="person">
   <view class="card">
-    <image
-      src="{{loginInfo.avatarUrl}}">
+    <image src="{{loginInfo.avatarUrl}}">
     </image>
     <block wx:if="{{loginInfo.id}}">
       <view class="name">
@@ -21,7 +20,7 @@
 
   <view class="h3">我的兑换</view>
   <view class="white-card">
-  <view class="opacityBtn" wx:if="{{!loginInfo || !loginInfo.id}}" bindtap="jumpLogin"></view>
+    <view class="opacityBtn" wx:if="{{!loginInfo || !loginInfo.id}}" bindtap="jumpLogin"></view>
     <view class="check" bindtap="toExchange" id='全部'>查看全部 ></view>
     <view class="flex">
       <view bindtap="toExchange" id='待兑换'>
@@ -39,40 +38,39 @@
   <block wx:if="{{loginInfo && loginInfo.id}}">
     <view class="h3">联系我们</view>
 
-    <view class="call-not"  wx:if="{{!loginInfo.staff}}">
-      <input type="text" placeholder="请输入销售姓名" bindinput="bindManagerValue"/>
-      <button type="primary" bindtap="fnSearch">查找</button>
+    <view class="call-not" wx:if="{{!loginInfo.staff}}">
+      <input type="text" placeholder="请输入销售姓名" bindinput="bindManagerValue" />
+      <button hover-class="search" type="primary" bindtap="fnSearch">查找</button>
     </view>
   </block>
- 
+
 
 
 
 
   <view class="white-card call" wx:if="{{loginInfo.staff}}">
-      <image
-        src="{{loginInfo.staff.avatar}}">
-      </image>
-      <view>
-        <view><text>姓名:</text> {{loginInfo.staff.name}}</view>
-        <view><text>职位: </text>{{loginInfo.staff.position}}</view>
-        <view><text>联系电话:</text> {{loginInfo.staff.mobile}}</view>
-        <view><text>地址:</text> {{loginInfo.staff.address}}</view>
-      </view>
+    <image src="{{loginInfo.staff.avatar}}">
+    </image>
+    <view>
+      <view><text>姓名:</text> {{loginInfo.staff.name ||'暂无'}}</view>
+      <view><text>职位: </text>{{loginInfo.staff.position ||'暂无'}}</view>
+      <view><text>联系电话:</text> {{loginInfo.staff.mobile ||'暂无'}}</view>
+      <view><text>地址:</text> {{loginInfo.staff.address  ||'暂无'}}</view>
+    </view>
   </view>
 
   <block wx:else>
     <view class="white-card call" wx:for="{{staffList}}" wx:key='*this'>
-    <image
-      src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
-    </image>
-    <view>
-      <view><text>姓名:</text> {{item.name}}</view>
-      <view><text>职位: </text>{{item.position}}</view>
-      <view><text>联系电话:</text> {{item.mobile}}</view>
-      <view><text>地址:</text> {{item.address}}</view>
-      <button class="bind" id="{{item.account}}" bindtap="bindManager">绑定</button>
+      <image
+        src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
+      </image>
+      <view>
+        <view><text>姓名:</text> {{item.name}}</view>
+        <view><text>职位: </text>{{item.position}}</view>
+        <view><text>联系电话:</text> {{item.mobile}}</view>
+        <view><text>地址:</text> {{item.address}}</view>
+        <button class="bind" id="{{item.account}}" data-value="{{index}}" bindtap="bindManager">绑定</button>
+      </view>
     </view>
-  </view>
   </block>
 </view>

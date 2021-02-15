@@ -86,12 +86,16 @@ Page({
     let params = {
       account: event.currentTarget.id
     }
-    this.bindRequest(params)
+    const index = event.currentTarget.dataset.value
+    this.bindRequest(params,index)
   },
-  async bindRequest(params){
+  async bindRequest(params,index){
    let res = await main.bindManager(params)
     if (res.status == 200) {
       console.log('绑定销售经理', res)
+      this.setData({
+        'loginInfo.staff': this.data.staffList[index]
+      })
       wx.showToast({
         title:'绑定成功'
       })

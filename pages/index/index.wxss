@@ -4,7 +4,7 @@
 }
 
 .swiper {
-  height: 250rpx;
+  height: 350rpx;
   border-radius: 10rpx;
   overflow: hidden;
 }
@@ -22,14 +22,15 @@
 }
 
 .recommend {
-  height: 150rpx;
+  height: 200rpx;
   width: 400rpx;
   background: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1448257146,587581063&fm=26&gp=0.jpg');
   background-size: cover;
   text-align: center;
   color: #ffffff;
-  line-height: 150rpx;
+  line-height: 200rpx;
   border-radius: 10rpx;
+  font-size: 40rpx;
 }
 
 .btn {
@@ -40,7 +41,7 @@
   text-align: center;
   background: #5cadff;
   color: #ffffff;
-  padding: 15rpx;
+  padding: 27rpx;
   box-sizing: border-box;
   margin-bottom: 15rpx;
   border-radius: 10rpx;
