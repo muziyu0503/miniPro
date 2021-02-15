@@ -50,6 +50,14 @@
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
 		"plugin": {
 			"list": []
 		},
@@ -69,44 +77,9 @@
 					"scene": null
 				},
 				{
-					"name": "推荐有奖",
-					"pathName": "pages/recommend/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "首页",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "排行榜",
-					"pathName": "pages/rank/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "商品详情",
-					"pathName": "pages/detail/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "积分商城",
-					"pathName": "pages/mall/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "个人中心",
-					"pathName": "pages/person/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"name": "我的兑换",
-					"pathName": "pages/exchange/index",
+					"id": -1,
+					"name": "员工表单",
+					"pathName": "pages/staffForm/staffForm",
 					"scene": null
 				}
 			]

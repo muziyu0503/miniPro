@@ -50,7 +50,6 @@ App({
     if (_res.authSetting['scope.userInfo']) {
       // 已经授权
       let result = await wx.$wxPromisify(wx.getUserInfo, { lang: 'zh_CN', withCredentials: true })
-      console.log('result', result)
       loadUser = true
       return res.code
     }
@@ -66,11 +65,9 @@ App({
       icon: 'none'
     })
     let sessionResult = await wx.$wxPromisify(wx.checkSession)
-    console.log('sessionResult', sessionResult)
     try {
       // session_key 未过期，并且在本生命周期一直有效
       const tokenInfo = await main.login(params)
-      console.log('tokenInfo', tokenInfo)
       if (tokenInfo.status === 200) {
         wx.setStorageSync('VIP-openinfo', tokenInfo.data)
         loadUser = true
@@ -147,9 +144,8 @@ App({
     return true
   },
   async _loginAll(ifshowLoading = true, refresh=false) {
-    // if (this.globalData.loginInfo.id && !refresh) return true
     this.globalData.openIdInfo = wx.getStorageSync('VIP-openinfo')
-    if (ifshowLoading) { // 暂时屏蔽loading
+    if (ifshowLoading) {
       wx.showLoading({
         title: '加载中.',
         mask: true
@@ -159,6 +155,7 @@ App({
       }, 5000)
     }
     if (!this.globalData.openIdInfo) {
+      debugger
       // 未获取用户信息token
       // loadUser判断上个接口是否调用成功，成功=>下一个流程(感觉这样写不美观，不晓得怎么链式调用，要是有更好的方法，可以改)
       let code = await this._wxlogin()
@@ -173,14 +170,13 @@ App({
     return loadUser // loadUser == true ==> 登陆成功， 反之，登陆流程出了差错
   },
   async bindGetUserInfo(e) {
-    console.log('e', e)
     sessionkeyErrNum = 0
     loginTips = true
     if (e.detail.errMsg === 'getUserInfo:ok') {
       let res = await wx.$wxPromisify(wx.getSetting)
-      console.log('bindGetUserInfo', res)
       if (res.authSetting['scope.userInfo']) {
         wxUserData = e.detail
+        console.log('wxUserData', wxUserData)
         let res = await this._loginAll(true)
         return res
       }

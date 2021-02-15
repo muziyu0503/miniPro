@@ -1,0 +1,19 @@
+<!--pages/staffForm/staffForm.wxml-->
+<view class="dis-flexr form">
+  <view class="title  dis-flex-center">请填写基本信息</view>
+  <view class="content">
+    <view class="form-item">
+      <input class="form-input"  placeholder="姓名"  bindinput="bindnamevalue"/>
+    </view>
+    <view class="form-item">
+      <input class="form-input"  placeholder="手机号" bindinput="bindphonevalue" type="number"/>
+    </view>
+    <view class="form-item">
+      <input class="form-input"  placeholder="职位" bindinput="bindposvalue"/>
+    </view>
+  </view>
+  <view class="submitbtn" bindtap="submitOrder">提交</view>
+  
+  <view>温馨提示</view>
+  <view>提交之后需管理员进行审核</view>
+</view>
