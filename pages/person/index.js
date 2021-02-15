@@ -12,7 +12,8 @@ Page({
       imgUrl: 'https://h5static.oss-cn-shenzhen.aliyuncs.com/lapp/vip/header-default1.png'
     },
     manager: '',
-    staffList:[]
+    staffList:[],
+    point: 0
   },
 
   /**
@@ -23,7 +24,7 @@ Page({
       title: '个人中心'
     })
     this.getUserInfo()
-    // this.getUserPoint()
+    
   },
   async getUserInfo () {
     let res = await app._loginAll()
@@ -32,10 +33,18 @@ Page({
       this.setData({
         loginInfo: app.globalData.loginInfo
       })
+      if (this.data.loginInfo.id) {
+        this.getUserPoint()
+        
+        
+      }
     }
   },
-  getUserPoint () {
-    app.getUserPoint()
+  async getUserPoint () {
+    let res = await app.getUserPoint()
+    this.setData({
+      point: res
+    })
   },
   async fnSearch(){
     let res = await main.staffList({

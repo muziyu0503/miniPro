@@ -17,7 +17,7 @@ Page({
       loginInfo: app.globalData.loginInfo
     })
     if (this.data.loginInfo && this.data.loginInfo.id) {
-      if (this.data.loginInfo.userNumber) {
+      if (this.data.loginInfo.phoneNumber) {
         // 有手机号,直接返回上一个页面
         this.backPrePage()
       } else {

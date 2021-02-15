@@ -1,15 +1,15 @@
 <view class="person">
   <view class="card">
     <image
-      src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
+      src="{{loginInfo.avatarUrl}}">
     </image>
     <block wx:if="{{loginInfo.id}}">
       <view class="name">
-        <view>Foron</view>
+        <view>{{loginInfo.nickName}}</view>
         <text class='vip'>VIP</text>
       </view>
       <view class="right">
-        <view class="num">60</view>
+        <view class="num">{{point}}</view>
         <text>积分</text>
         <view class="detail" bindtap="jumpPointDetail">积分明细</view>
       </view>

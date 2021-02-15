@@ -231,6 +231,9 @@ App({
   // 获取自己积分
   async getUserPoint () {
     let res = await main.userpoints()
+    if (res.status == 200) {
+      return res.data
+    }
     console.log('获取自己积分', res)
   },
   isLogin () {
