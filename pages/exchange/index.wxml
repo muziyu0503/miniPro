@@ -1,6 +1,6 @@
 <view class="exchange">
   <view class="tabs flex">
-    <view wx:key="index" wx:for="{{tabsList}}" class="{{ active===item ?'on':''}}" id="{{item}}" bindtap="fnChangeTab" data-index="index">{{item}}</view>
+    <view wx:key="index" wx:for="{{tabsList}}" class="{{ active===item ?'on':''}}" id="{{item}}" bindtap="fnChangeTab" data-index="{{index}}">{{item}}</view>
   </view>
   <scroll-view class='scroll' scroll-y>
     <view  wx:for="{{goodList}}" wx:key="index"  wx:for-item="arrItem" wx:for-index="arrIndex">
@@ -21,8 +21,7 @@
       </view>
       <view class="btn">
         订单号: {{item.code}}
-        <!--  wx:if="{{item.exchangeStatus == 0}}" -->
-        <button bindtap="exchangeOrder" data-code="{{item.code}}">确认兑换</button>
+        <button bindtap="exchangeOrder" wx:if="{{item.exchangeStatus == 0}}" data-code="{{item.code}}">确认兑换</button>
       </view>
     </view>
     </view>

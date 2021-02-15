@@ -47,6 +47,7 @@ Page({
         pull_loading: true
       })
     }
+    console.log('this.data.cur', this.data.cur)
     let params = {
       exchangeStatus: this.data.cur == 1 ? 0 : this.data.cur == 2 ? 1 : '',// 订单状态 0 待兑换 1 已兑换
       pageNo:this.pageNo,
