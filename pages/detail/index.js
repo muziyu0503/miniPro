@@ -31,7 +31,8 @@ Page({
       } catch (e) {
         console.log('兑换e', e)
         wx.showToast({
-          title: e.message
+          title: e.message,
+          icon: 'none'
         })
       }
      
