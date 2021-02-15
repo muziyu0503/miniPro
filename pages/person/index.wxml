@@ -47,7 +47,7 @@
 
   <view class="white-card call" wx:if="{{loginInfo.staff}}">
       <image
-        src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
+        src="{{loginInfo.staff.avatar}}">
       </image>
       <view>
         <view><text>姓名:</text> {{loginInfo.staff.name}}</view>
