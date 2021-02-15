@@ -5,12 +5,9 @@
     <view class="flex1">积分</view>
   </view>
   <scroll-view scroll-y="">
-    <view class="item" wx:for="{{rankList}}" wx:key="index" wx:if="{{rankList[0].length>0}}">
-      <view class="img" wx:if="{{index==0}}">
+    <view class="item" wx:for="{{rankList}}" wx:key="index" wx:if="{{rankList.length>0}}">
+      <view class="img">
         No.{{index+1}}<image src="../../images/rank{{index+1}}.png" wx:if="{{index<=2}}"></image>
-      </view>
-      <view class="img" wx:else>
-        No.{{index+1}}
       </view>
       <view class="portrait">
         <image src="{{item.avatarUrl}}">
