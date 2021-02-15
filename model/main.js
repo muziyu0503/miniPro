@@ -102,7 +102,7 @@ class Main extends HTTP {
   }
   adduser(data) { // 注册用户信息
     return this.request({
-      url: config.domain + `user/${config.appid}`,
+      url: config.domain + `user/phone/${config.appid}`,
       data,
       method: 'post'
     })

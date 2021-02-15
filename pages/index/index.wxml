@@ -27,8 +27,8 @@
     </view>
     <view class="row">
       <view class="item" wx:for="{{rankList}}" wx:key='*this'
-      bindtap="toDetail" data-id='1'>
-        <image src='{{item.banner[0]}}'></image>
+      bindtap="toDetail" data-id='{{index}}'>
+        <image src='{{item.img}}'></image>
         <view>{{item.name}}</view>
         <text>{{item.points}} 积分</text>
       </view>

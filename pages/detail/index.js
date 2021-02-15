@@ -7,14 +7,18 @@ Page({
   data: {
     imgList:[{
       url:'https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg'
-    }]
+    }],
+    details:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   this.setData({
+     details:wx.getStorageSync('details')
+   }) 
+   wx.removeStorageSync('details')
   },
 
   /**

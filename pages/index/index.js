@@ -6,9 +6,7 @@ let main = new Main()
 Page({
   data: {
     background: new Array(3),
-    rankList:[
-      {},{},{},{},{},{},{}
-    ],
+    rankList:[],
     loginInfo: null
   },
   pageNum: 1,
@@ -34,7 +32,6 @@ Page({
     }
     let res = await main.goodslist(params)
     if (res.status == 200) {
- 
       this.setData({
         rankList: res.data.list
       })
@@ -42,10 +39,12 @@ Page({
     }
   },
   toDetail(e){
-    console.log(e)
+    const index = e.currentTarget.dataset.id
     wx.navigateTo({
       url: '/pages/detail/index'
     })
+    
+    wx.setStorageSync('details', this.data.rankList[index])
   },
   /**
    * 跳转推荐页面

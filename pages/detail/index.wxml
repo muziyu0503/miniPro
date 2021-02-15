@@ -1,16 +1,13 @@
 <view class="detail">
   <swiper class="swiper" autoplay indicator-dots indicator-active-color='#ffffff' indicator-color='#000000'>
-    <block wx:for="{{imgList}}" wx:key="*this">
+    <block wx:for="{{details.banner}}" wx:key="*this">
       <swiper-item>
-        <image mode='widthFix' src='{{item.url}}'></image>
+        <image mode='widthFix' src='{{item}}'></image>
       </swiper-item>
     </block>
   </swiper>
-  <view class="h3">JUPTTEE智能健身动感单车蓝牙互联轻运动家庭版</view>
-  <view class="num">500积分</view>
+  <view class="h3">{{details.name}}</view>
+  <view class="num">{{details.points}}积分</view>
   <view class="rule">兑换规则</view>
-  <rich-text>123</rich-text>
-  <view class="bottom">
-    
-  </view>
+  <rich-text nodes="{{details.description}}"></rich-text>
 </view>

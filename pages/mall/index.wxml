@@ -8,8 +8,9 @@
   </view>
   <view class="row">
     <view wx:for="{{goodList}}" wx:key="index" wx:for-item="arrItem" wx:for-index="arrIndex">
-      <view class="item" wx:for="{{arrItem}}" wx:key='arrIndex' bindtap="toDetail" data-id='1'>
-        <image src='{{item.banner[0]}}'></image>
+      <view class="item" wx:for="{{arrItem}}" wx:key='arrIndex' bindtap="toDetail"
+ data-id="{{index}},{{arrIndex}}">
+        <image src='{{item.img}}'></image>
         <view>{{item.name}}</view>
         <text>{{item.points}} 积分</text>
       </view>
