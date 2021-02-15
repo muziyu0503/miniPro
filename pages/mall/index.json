@@ -1,7 +1,5 @@
 {
   "usingComponents": {},
-  "enablePullDownRefresh": true,
-  "onReachBottomDistance": 300,
   "backgroundTextStyle": "dark",
   "navigationBarTitleText": "积分商城"
 }

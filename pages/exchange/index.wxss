@@ -3,6 +3,9 @@ page {
   padding: 30rpx;
   box-sizing: border-box;
 }
+.mall {
+  height: 100%;
+}
 .exchange {
   height: 100%;
 }

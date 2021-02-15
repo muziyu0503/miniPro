@@ -1,3 +1,8 @@
+page {
+  height: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
 .search {
   position: relative;
   border: 2rpx solid #cfcfd0;
@@ -34,12 +39,11 @@ button {
 .search-fixed {
   position: fixed;
 }
-.mall {
-  padding: 30rpx;
-}
+
 
 .row {
   margin-top: 20rpx;
+  height: calc(100% - 80rpx);
 }
 
 .item {

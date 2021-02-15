@@ -1,23 +1,22 @@
 <view class="mall">
-  <view class="searchbox">
-    <view class="search dis-flex {{isScroll ? 'search-fixed' : ''}}">
-      <image src="../../images/search.png"></image>
-      <input type='text' placeholder="请输入查找内容" confirm-type="search" bindinput="bindinputValue"/>
-      <view class="searchbtn dis-flex dis-flex-center" bindtap="searchGood">搜索</view>
-    </view>
-  </view>
-  <view class="row">
-    <view wx:for="{{goodList}}" wx:key="index" wx:for-item="arrItem" wx:for-index="arrIndex">
-      <view class="item" wx:for="{{arrItem}}" wx:key='arrIndex' bindtap="toDetail"
- data-id="{{index}},{{arrIndex}}">
-        <image src='{{item.img}}'></image>
-        <view>{{item.name}}</view>
-        <text>{{item.points}} 积分</text>
-      </view>
-    </view>
-  </view>
-  <view class="waiting_img" wx:if="{{pull_loading}}">
-    <image lazy-load="true" src="/images/waiting.gif"></image>
-  </view>
-  <view class='endTips' wx:if="{{pull_over}}">数据全部加载完成</view>
+	<view class="searchbox">
+		<view class="search dis-flex {{isScroll ? 'search-fixed' : ''}}">
+			<image src="../../images/search.png"></image>
+			<input type='text' placeholder="请输入查找内容" confirm-type="search" bindinput="bindinputValue" />
+			<view class="searchbtn dis-flex dis-flex-center" bindtap="searchGood">搜索</view>
+		</view>
+	</view>
+	<scroll-view class='row' scroll-y bindscrolltolower="tolower" bindscrolltoupper="toupper">
+		<view wx:for="{{goodList}}" wx:key="index" wx:for-item="arrItem" wx:for-index="arrIndex">
+			<view class="item" wx:for="{{arrItem}}" wx:key='arrIndex' bindtap="toDetail" data-id="{{index}},{{arrIndex}}">
+				<image src='{{item.img}}'></image>
+				<view>{{item.name}}</view>
+				<text>{{item.points}} 积分</text>
+			</view>
+		</view>
+		<view class="waiting_img" wx:if="{{pull_loading}}">
+			<image lazy-load="true" src="/images/waiting.gif"></image>
+		</view>
+		<view class='endTips' wx:if="{{pull_over}}">数据全部加载完成</view>
+	</scroll-view>
 </view>
