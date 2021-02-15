@@ -1,6 +1,6 @@
 <view class="mall">
 	<view class="searchbox">
-		<view class="search dis-flex {{isScroll ? 'search-fixed' : ''}}">
+		<view class="search dis-flex">
 			<image src="../../images/search.png"></image>
 			<input type='text' placeholder="请输入查找内容" confirm-type="search" bindinput="bindinputValue" />
 			<view class="searchbtn dis-flex dis-flex-center" bindtap="searchGood">搜索</view>
