@@ -113,7 +113,7 @@ App({
     })
     try {
       let res = await main.adduser(params)
-      if (res.success === true) {
+      if (res.status === 200) {
         loadUser = true
         return true
       } else {
@@ -197,7 +197,7 @@ App({
     let params = {
       encryptedData: data.encryptedData,
       iv: data.iv,
-      rawData	: data.rawData,
+      rawData	: wx.getStorageSync('VIP-openinfo'),
       sessionKey: this.globalData.openIdInfo.sessionKey,
       signature: data.signature
     }
