@@ -12,13 +12,29 @@ Page({
     }],
     details:{}
   },
-  fnExchange(){
+  async fnExchange(){
     let res = app.isLogin()
     console.log('res', res)
     if (res) {
-      wx.navigateTo({
-        url: '/pages/recommend/index'
-      })
+
+      let params = {
+        goodsCode: this.data.details.code
+      }
+      try {
+        let res = await main.pointOrder(params)
+        console.log('兑换', res)
+        if (res.status == 200) {
+          wx.showToast({
+            title:'兑换成功'
+          })
+        }
+      } catch (e) {
+        console.log('兑换e', e)
+        wx.showToast({
+          title: e.message
+        })
+      }
+     
     }
   },
   /**
@@ -28,6 +44,7 @@ Page({
    this.setData({
      details:wx.getStorageSync('details')
    }) 
+   console.log('details', this.data.details)
    wx.removeStorageSync('details')
   },
 

@@ -63,17 +63,16 @@ Page({
       url: '/pages/H5/index'
     })
   },
-  toMall(){
-    wx.switchTab({
-      url: '/pages/mall/index'
-    })
-  },
-  toRank(){
+  toRank (){
     wx.navigateTo({
       url: '/pages/rank/index'
     })
   },
- 
+  toMall (){
+    wx.navigateTo({
+      url: '/pages/mall/index'
+    })
+  },
   jump(e) {
     console.log(e.currentTarget.dataset.url)
     let url = e.currentTarget.dataset.url

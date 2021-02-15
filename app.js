@@ -237,7 +237,7 @@ App({
     console.log('获取自己积分', res)
   },
   isLogin () {
-    if (this.globalData.loginInfo && this.globalData.loginInfo.id) {
+    if (this.globalData.loginInfo && this.globalData.loginInfo.id && this.globalData.loginInfo.phoneNumber) {
       return true
     } else {
       wx.navigateTo({

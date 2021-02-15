@@ -55,7 +55,8 @@ class Main extends HTTP {
     return this.request({
       url: config.domain + `order/${config.appid}`,
       data,
-      method: 'post'
+      method: 'post',
+      notVerification: true
     })
   }
   login(data) { // 用户登录

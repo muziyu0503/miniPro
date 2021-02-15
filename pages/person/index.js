@@ -53,7 +53,6 @@ Page({
       pageNum: 1
     })
     res = res.data
-    debugger
     this.setData({
       staffList: res.list
     })
