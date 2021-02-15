@@ -42,6 +42,7 @@ class HTTP {
           }
           resolve(res.data)
         } else {
+          console.log('处理异常res', res)
           //处理异常
           const errorMsg = res.data.msg || res.data.errorMsg || '抱歉！服务器有点忙'
           if(!notVerification){
@@ -51,7 +52,7 @@ class HTTP {
               duration: 2000,
             });
           }
-          if (res.data.code == '403') {
+          if (res.data.status == '401' || res.data.status == '403') {
             wx.navigateTo({
               url: '/pages/userlogin/userlogin',
             })
