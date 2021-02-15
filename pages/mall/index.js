@@ -22,6 +22,15 @@ Page({
   onLoad: function (options) {
     this.getGoodList()
   },
+  toDetail(e){
+    const index = e.currentTarget.dataset.id.split(',')
+
+    wx.navigateTo({
+      url: '/pages/detail/index'
+    })
+    debugger
+    wx.setStorageSync('details', this.data.goodList[index[0]][index[1]])
+  },
   async getGoodList () {
     if (!this.data.pull_over) {
       this.setData({
