@@ -107,6 +107,14 @@ class Main extends HTTP {
       method: 'post'
     })
   }
+  rankList(data) { // 积分排行榜
+    return this.request({
+      url: config.domain + `points/rank/${config.appid}`,
+      data,
+      method: 'get'
+    })
+  }
+  
   staffList(data) { // 员工信息列表
     return this.request({
       url: config.domain + `/user/staff/list/${config.appid}`,
