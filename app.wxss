@@ -5,6 +5,8 @@
   align-content: center;
   font-size: 30rpx;
   padding: 20rpx 16rpx;
+  height: 100rpx;
+  box-sizing: border-box;
 }
 .waiting_img {
   text-align: center;

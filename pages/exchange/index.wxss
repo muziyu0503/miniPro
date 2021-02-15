@@ -1,5 +1,10 @@
-.exchange {
+page {
+  height: 100%;
   padding: 30rpx;
+  box-sizing: border-box;
+}
+.exchange {
+  height: 100%;
 }
 
 .tabs view {
@@ -86,5 +91,5 @@
   opacity: .75;
 }
 .scroll{
-  height: 89vh;
+  height: calc(100% - 100rpx);
 }

@@ -113,21 +113,25 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+   
+  },
+  toupper () {
     this.pageNo = 1
     this.getGoodList()
   },
-
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+   
+  },
+  tolower () {
     console.log('到达底部')
     if (!this.data.pull_over && !this.data.pull_loading) {
       this.pageNo = this.pageNo + 1
       this.getGoodList()
     }
   },
-
   /**
    * 用户点击右上角分享
    */
