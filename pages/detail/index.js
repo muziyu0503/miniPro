@@ -51,7 +51,7 @@ Page({
      details:wx.getStorageSync('details')
    }) 
    console.log('details', this.data.details)
-   wx.removeStorageSync('details')
+  
   },
 
   /**
@@ -79,7 +79,8 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    
+    wx.removeStorageSync('details')
   },
 
   /**
