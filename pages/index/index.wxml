@@ -23,7 +23,7 @@
 
     <view class="rank-header">
       <text>积分兑换</text>
-      <view>查看全部 ></view>
+      <view bindtap="toMall">查看全部 ></view>
     </view>
     <view class="row">
       <view class="item" wx:for="{{rankList}}" wx:key='*this'

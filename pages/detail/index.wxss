@@ -29,3 +29,6 @@
   font-size: 28rpx;
   margin-bottom: 10rpx;
 }
+.bottom {
+  height: ;
+}

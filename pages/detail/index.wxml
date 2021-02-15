@@ -10,4 +10,7 @@
   <view class="num">500积分</view>
   <view class="rule">兑换规则</view>
   <rich-text>123</rich-text>
+  <view class="bottom">
+    
+  </view>
 </view>

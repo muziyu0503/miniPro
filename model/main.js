@@ -107,6 +107,13 @@ class Main extends HTTP {
       method: 'post'
     })
   }
+  rankList(data) { // 积分排行榜
+    return this.request({
+      url: config.domain + `points/rank/${config.appid}`,
+      data,
+      method: 'get'
+    })
+  }
 }
 export { Main }
 
