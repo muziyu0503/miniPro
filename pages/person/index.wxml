@@ -37,12 +37,28 @@
 
   <view class="h3">联系我们</view>
 
-  <view class="call-not">
+  <view class="call-not"  wx:if="{{!loginInfo.staff}}">
     <input type="text" placeholder="请输入销售姓名" bindinput="bindManagerValue"/>
     <button type="primary" bindtap="fnSearch">查找</button>
   </view>
 
-  <view class="white-card call" wx:for="{{staffList}}" wx:key='*this'>
+
+
+
+  <view class="white-card call" wx:if="{{loginInfo.staff}}">
+      <image
+        src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
+      </image>
+      <view>
+        <view><text>姓名:</text> {{loginInfo.staff.name}}</view>
+        <view><text>职位: </text>{{loginInfo.staff.position}}</view>
+        <view><text>联系电话:</text> {{loginInfo.staff.mobile}}</view>
+        <view><text>地址:</text> {{loginInfo.staff.address}}</view>
+      </view>
+  </view>
+
+  <block wx:else>
+    <view class="white-card call" wx:for="{{staffList}}" wx:key='*this'>
     <image
       src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg">
     </image>
@@ -54,4 +70,5 @@
       <button class="bind" id="{{item.account}}" bindtap="bindManager">绑定</button>
     </view>
   </view>
+  </block>
 </view>
