@@ -69,8 +69,8 @@ Page({
     })
   },
   toMall (){
-    wx.navigateTo({
-      url: '/pages/mall/index'
+    wx.switchTab({
+      url: '/pages/mall/index',
     })
   },
   jump(e) {
