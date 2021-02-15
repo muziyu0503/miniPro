@@ -7,9 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgList:[{
-      url:'https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg'
-    }],
+    imgList:[],
     details:{}
   },
   async fnExchange(){
