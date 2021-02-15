@@ -74,7 +74,10 @@ Page({
     let res = await main.exchangeOrder(params)
     console.log('确认兑换', res)
     if (res.status == 200) {
-
+      wx.showToast({
+        title: '兑换成功',
+      })
+      this.getGoodList()
     }
   },
   /**
