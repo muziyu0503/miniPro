@@ -3,6 +3,7 @@ page {
   padding: 30rpx 30rpx 0 30rpx;
   box-sizing: border-box;
 }
+
 .search {
   position: relative;
   display: flex;
@@ -10,21 +11,29 @@ page {
   font-size: 28rpx;
   width: 100%;
 }
+
 button {
   padding: 0;
   margin: 0;
 }
+
 .search .searchbtn {
-  width: 100rpx;
-  height: 70rpx;
-  background: rgb(51, 51, 51);
+  width: 120rpx;
+  height: 86rpx;
+  background: rgb(86, 86, 86);
   color: #ffffff;
   font-size: 30rpx;
-  border-radius: 10rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  position: absolute;
+  right: -11px;
+  z-index: 2;
 }
+
 .search input {
   flex: 1;
 }
+
 .searchbox {
   height: 90rpx;
   border: 2rpx solid #cfcfd0;
@@ -32,14 +41,18 @@ button {
   box-sizing: border-box;
   border-radius: 50rpx;
   align-items: center;
+  margin-bottom: 50rpx;
 }
+
 .search image {
   width: 50rpx;
   height: 50rpx;
 }
+
 .search-fixed {
   position: fixed;
 }
+
 .mall {
   height: 100%;
 }
@@ -51,23 +64,22 @@ button {
 
 .item {
   font-size: 20rpx;
-  width:320rpx;
+  width: 330rpx;
   display: inline-block;
   margin-right: 30rpx;
   margin-bottom: 20rpx;
-  border: 2rpx solid #cccccc;
   border-radius: 14rpx;
   overflow: hidden;
-  box-shadow: 2rpx 3rpx 20rpx #cccccc;
+  box-shadow: 0rpx 4rpx 11rpx #cccccc;
   padding-bottom: 20rpx;
 }
 
-.item:nth-child(2n){
+.item:nth-child(2n) {
   margin-right: 0;
 }
 
 .item image {
-  width: 320rpx;
+  width: 330rpx;
   height: 250rpx;
   margin-bottom: 5rpx;
 }
@@ -77,7 +89,7 @@ button {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  font-size:28rpx;
+  font-size: 28rpx;
   color: #555;
   height: 60rpx;
   padding: 0 10rpx;

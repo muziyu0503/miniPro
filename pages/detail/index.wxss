@@ -2,14 +2,14 @@
   padding: 30rpx;
 }
 .swiper {
-  height: 300rpx;
+  height: 700rpx;
   border-radius: 10rpx;
   overflow: hidden;
 }
 
 .swiper image {
   width: 100%;
-  height: 300rpx;
+  height: 700rpx;
 }
 .h3{
   font-size: 30rpx;
@@ -29,7 +29,7 @@
   font-size: 28rpx;
   margin-bottom: 10rpx;
 }
-.rich-text{
+.mb100{
   margin-bottom: 100rpx;
 }
 .change{

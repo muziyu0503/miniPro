@@ -2,7 +2,7 @@
   <swiper class="swiper" autoplay indicator-dots indicator-active-color='#ffffff' indicator-color='#000000'>
     <block wx:for="{{details.banner}}" wx:key="*this">
       <swiper-item>
-        <image mode='aspectFit' src='{{item}}'></image>
+        <image mode='heightFix' src='{{item}}'></image>
       </swiper-item>
     </block>
   </swiper>
@@ -10,5 +10,6 @@
   <view class="num">{{details.points}}积分</view>
   <view class="rule">兑换规则</view>
   <rich-text nodes="{{details.description}}"></rich-text>
+  <view class="mb100"></view>
   <button class="change" bindtap="fnExchange">立即兑换</button>
 </view>

@@ -1,6 +1,6 @@
 <view class="person">
   <view class="card">
-    <image src="{{loginInfo.avatarUrl}}">
+    <image src="{{loginInfo.avatarUrl || '../../images/default.png'}}">
     </image>
     <block wx:if="{{loginInfo.id}}">
       <view class="name">
@@ -14,7 +14,7 @@
       </view>
     </block>
     <block wx:else>
-      <view bindtap="jumpLogin" class="loginbtn">登录</view>
+      <view bindtap="jumpLogin" class="loginbtn">立即登录</view>
     </block>
   </view>
 
@@ -38,9 +38,12 @@
   <block wx:if="{{loginInfo && loginInfo.id}}">
     <view class="h3">联系我们</view>
 
-    <view class="call-not" wx:if="{{!loginInfo.staff}}">
-      <input type="text" placeholder="请输入销售姓名" bindinput="bindManagerValue" />
-      <button hover-class="search" type="primary" bindtap="fnSearch">查找</button>
+    <view class="searchbox dis-flex" wx:if="{{!loginInfo.staff}}">
+      <view class="search dis-flex">
+        <image src="../../images/search.png"></image>
+        <input type='text' placeholder="请输入销售姓名" confirm-type="search" bindinput="bindManagerValue" />
+        <view class="searchbtn dis-flex dis-flex-center" bindtap="fnSearch">搜索</view>
+      </view>
     </view>
   </block>
 

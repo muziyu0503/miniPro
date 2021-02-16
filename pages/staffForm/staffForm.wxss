@@ -15,6 +15,8 @@
   height: 60rpx;
   border: 1px solid #ccc;
   margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  padding: 10rpx;
 }
 .content .form-item input {
   height: 100%;
@@ -23,7 +25,7 @@
 }
 .submitbtn {
   text-align: center;
-  background: #5cadff;
+  background: #2d2d2d;
   color: #ffffff;
   padding: 15rpx 50rpx;
   box-sizing: border-box;

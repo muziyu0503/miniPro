@@ -39,7 +39,8 @@
 
 .btn view {
   text-align: center;
-  background: #5cadff;
+  background: #3e3d40;
+  background-image: linear-gradient(to bottom,#3e3d40 0,#676767 100%);
   color: #ffffff;
   padding: 27rpx;
   box-sizing: border-box;
@@ -50,7 +51,8 @@
 
 .btn view:last-child {
   margin-bottom: 0;
-  background: #2db7f5;
+  background: #676767;
+  background-image: linear-gradient(to bottom,#676767 0,#3e3d40 100%);
 }
 
 .rank-header {
@@ -60,7 +62,13 @@
   font-size: 28rpx;
   margin-top: 40rpx;
 }
+.rank-header text{
+  font-size: 30rpx;
+}
 
+.rank-header view{
+  color: #555;
+}
 .rank-header view:last-child:active {
   opacity: .75;
 }
@@ -71,14 +79,13 @@
 
 .item {
   font-size: 20rpx;
-  width: 320rpx;
+  width: 330rpx;
   display: inline-block;
   margin-right: 30rpx;
   margin-bottom: 20rpx;
-  border: 2rpx solid #cccccc;
   border-radius: 14rpx;
   overflow: hidden;
-  box-shadow: 2rpx 3rpx 20rpx #cccccc;
+  box-shadow: 0rpx 4rpx 11rpx #cccccc;
   padding-bottom: 20rpx;
 
 }
@@ -87,7 +94,7 @@
 }
 
 .item image {
-  width: 320rpx;
+  width: 330rpx;
   height: 250rpx;
   margin-bottom: 5rpx;
 }

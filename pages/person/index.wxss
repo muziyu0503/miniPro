@@ -74,6 +74,7 @@
 .check {
   font-size: 26rpx;
   text-align: right;
+  color: #555;
 }
 
 .flex {
@@ -108,6 +109,8 @@
 
 .call>view {
   width: 400rpx;
+  font-size: 28rpx;
+  line-height: 1.6;
 }
 
 .call>view text {
@@ -147,9 +150,60 @@
   background-color: rgb(51, 51, 51);
   margin: 0 !important;
   float: right;
+  font-size: 28rpx;
 }
-.search{
+
+.search {
   background: #ffffff !important;
   color: #000000 !important;
   opacity: .75;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  width: 100%;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+}
+
+.search .searchbtn {
+  width: 120rpx;
+  height: 86rpx;
+  background: rgb(12, 12, 12);
+  color: #ffffff;
+  font-size: 30rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  position: absolute;
+  right: -11px;
+  z-index: 2;
+}
+
+.search input {
+  flex: 1;
+}
+
+.searchbox {
+  height: 90rpx;
+  border: 2rpx solid #cfcfd0;
+  padding: 0 20rpx 0 10rpx;
+  box-sizing: border-box;
+  border-radius: 50rpx;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+
+.search image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.search-fixed {
+  position: fixed;
 }

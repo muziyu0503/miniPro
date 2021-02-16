@@ -14,6 +14,6 @@
   </view>
   <view class="submitbtn" bindtap="submitOrder">提交</view>
   
-  <view>温馨提示</view>
-  <view>提交之后需管理员进行审核</view>
+  <view style="font-size: 30rpx;margin-bottom:10rpx; margin-top: 50rpx">温馨提示</view>
+  <view style="font-size:26rxp;color:#333">提交之后需管理员进行审核</view>
 </view>

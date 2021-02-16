@@ -7,7 +7,7 @@
       <text>{{item.createTime}}</text>
     </view>
      <view class="right">
-      <text>{{item.type==0 ? '-' : '+'}}{{item.points}}积分</text>
+      <text>{{item.points>0 ? '+' : ''}}{{item.points}}积分</text>
     </view>
   </view>
  </view>

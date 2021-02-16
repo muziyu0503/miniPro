@@ -48,6 +48,9 @@ Page({
    this.setData({
      details:wx.getStorageSync('details')
    }) 
+   wx.setNavigationBarTitle({
+     title: '商品详情'
+   })
    console.log('details', this.data.details)
   
   },
