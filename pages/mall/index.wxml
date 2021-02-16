@@ -1,5 +1,5 @@
 <view class="mall">
-	<view class="searchbox">
+	<view class="searchbox dis-flex">
 		<view class="search dis-flex">
 			<image src="../../images/search.png"></image>
 			<input type='text' placeholder="请输入查找内容" confirm-type="search" bindinput="bindinputValue" />

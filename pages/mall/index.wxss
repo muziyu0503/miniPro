@@ -5,14 +5,10 @@ page {
 }
 .search {
   position: relative;
-  border: 2rpx solid #cfcfd0;
   display: flex;
-  padding: 10rpx;
   align-items: center;
-  border-radius: 50rpx;
   font-size: 28rpx;
-  padding-right: 34rpx;
-  box-sizing: border-box;
+  width: 100%;
 }
 button {
   padding: 0;
@@ -30,8 +26,12 @@ button {
   flex: 1;
 }
 .searchbox {
-  height: 80rpx;
-  margin-bottom: 50rpx;
+  height: 90rpx;
+  border: 2rpx solid #cfcfd0;
+  padding: 0 20rpx 0 10rpx;
+  box-sizing: border-box;
+  border-radius: 50rpx;
+  align-items: center;
 }
 .search image {
   width: 50rpx;
@@ -46,7 +46,7 @@ button {
 
 .row {
   margin-top: 20rpx;
-  height: calc(100% - 80rpx - 20rpx);
+  height: calc(100% - 90rpx - 20rpx);
 }
 
 .item {

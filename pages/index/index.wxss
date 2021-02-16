@@ -71,21 +71,23 @@
 
 .item {
   font-size: 20rpx;
-  width: 220rpx;
+  width: 320rpx;
   display: inline-block;
-  margin-right: 12rpx;
+  margin-right: 30rpx;
   margin-bottom: 20rpx;
   border: 2rpx solid #cccccc;
   border-radius: 14rpx;
   overflow: hidden;
   box-shadow: 2rpx 3rpx 20rpx #cccccc;
+  padding-bottom: 20rpx;
+
 }
-.item:nth-child(3n){
+.item:nth-child(2n){
   margin-right: 0;
 }
 
 .item image {
-  width: 220rpx;
+  width: 320rpx;
   height: 250rpx;
   margin-bottom: 5rpx;
 }
