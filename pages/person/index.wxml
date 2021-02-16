@@ -2,7 +2,7 @@
   <view class="card">
     <image src="{{loginInfo.avatarUrl || '../../images/default.png'}}">
     </image>
-    <block wx:if="{{loginInfo.id}}">
+    <block wx:if="{{loginInfo.id && loginInfo.phoneNumber}}">
       <view class="name">
         <view>{{loginInfo.nickName}}</view>
         <text class='vip'>VIP</text>

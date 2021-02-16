@@ -3,18 +3,18 @@
   <view class='logobox'>
     <image src='https://www.mercedes-benz.com.cn/content/dam/mb-cn/s-class-assets/highlights-page/desktop/highlight-herobanner.jpg' class='logo' mode='aspectFill'></image>
   </view>
-  <view class='tips' wx:if="{{!showTelTips}}">授权昵称、头像等信息登陆小程序，我们会对您的信息进行严格保密。</view>
-  <view class='tips' wx:else>授权手机号登陆小程序，我们会对您的信息进行严格保密。</view>
+  <view class='tips' wx:if="{{!loginInfo || !loginInfo.id}}">授权昵称、头像等信息登陆小程序，我们会对您的信息进行严格保密。</view>
+  <view class='tips' wx:if="{{loginInfo && loginInfo.id && !loginInfo.phoneNumber}}">授权手机号登陆小程序，我们会对您的信息进行严格保密。</view>
   <button
     open-type="getUserInfo"
     bindgetuserinfo="bindGetUserInfo"
     class='gobtn'
-    wx:if="{{!showTelTips}}"
+    wx:if="{{!loginInfo || !loginInfo.id}}"
   >
     去登录
   </button>
   <!-- 手机号 -->
-  <button class="gobtn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"  wx:if="{{showTelTips}}">
+  <button class="gobtn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"  wx:if="{{loginInfo && loginInfo.id && !loginInfo.phoneNumber}}">
     授权手机号
   </button>
 </view>
