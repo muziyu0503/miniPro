@@ -40,6 +40,16 @@ Page({
     this.setData({
       active: options.type
     })
+    if(options.type === '待兑换'){
+        this.setData({
+          cur: 1
+        })
+    }
+    if(options.type === '已兑换'){
+        this.setData({
+          cur: 2
+        })
+    }
     this.getGoodList()
   },
   async getGoodList () {
