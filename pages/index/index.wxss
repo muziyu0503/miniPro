@@ -95,7 +95,8 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  font-size:22rpx;
+  font-size:28rpx;
+  color: #555;
   height: 60rpx;
   padding: 0 10rpx;
 }
