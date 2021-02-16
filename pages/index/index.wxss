@@ -73,8 +73,12 @@
   font-size: 20rpx;
   width: 220rpx;
   display: inline-block;
-  margin-right: 15rpx;
+  margin-right: 12rpx;
   margin-bottom: 20rpx;
+  border: 2rpx solid #cccccc;
+  border-radius: 14rpx;
+  overflow: hidden;
+  box-shadow: 2rpx 3rpx 20rpx #cccccc;
 }
 .item:nth-child(3n){
   margin-right: 0;
@@ -92,10 +96,13 @@
   -webkit-line-clamp: 2;
   overflow: hidden;
   font-size:22rpx;
+  height: 60rpx;
+  padding: 0 10rpx;
 }
 
 .item text {
   color: #ed4014;
   font-size: 30rpx;
   margin-top: 10rpx;
+  padding: 0 10rpx;
 }
