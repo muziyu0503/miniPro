@@ -3,7 +3,7 @@ const app = getApp()
 Page({
   data: {
     loginInfo: null,
-    showTelTips: false // 是否展示授权手机号的相关信息
+    // showTelTips: false // 是否展示授权手机号的相关信息
   },
   onLoad: function (options) {
     this.setData({
@@ -21,9 +21,9 @@ Page({
         // 有手机号,直接返回上一个页面
         this.backPrePage()
       } else {
-        this.setData({
-          showTelTips: true
-        })
+        // this.setData({
+        //   showTelTips: true
+        // })
       }
     }
    
