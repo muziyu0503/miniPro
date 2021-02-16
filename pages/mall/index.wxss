@@ -58,8 +58,7 @@ button {
 }
 
 .row {
-  margin-top: 20rpx;
-  height: calc(100% - 90rpx - 20rpx);
+  height: calc(100% - 90rpx - 50rpx);
 }
 
 .item {

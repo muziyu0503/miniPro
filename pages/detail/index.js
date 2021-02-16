@@ -26,7 +26,8 @@ Page({
         console.log('兑换', res)
         if (res.status == 200) {
           wx.showToast({
-            title:'兑换成功'
+            title:'兑换成功',
+            duration: 4000
           })
         }
         wx.hideLoading()
@@ -34,7 +35,8 @@ Page({
         console.log('兑换e', e)
         wx.showToast({
           title: e.message,
-          icon: 'none'
+          icon: 'none',
+          duration: 5000
         })
         wx.hideLoading()
       }
