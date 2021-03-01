@@ -4,14 +4,14 @@
 }
 
 .swiper {
-  height: 350rpx;
+  height: 700rpx;
   border-radius: 10rpx;
   overflow: hidden;
 }
 
 .swiper image {
   width: 100%;
-  height: 250rpx;
+  height: 100%;
 }
 
 .btn-block {

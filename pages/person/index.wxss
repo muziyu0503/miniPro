@@ -64,7 +64,6 @@
 .white-card {
   width: 100%;
   background-color: rgb(255, 255, 255);
-  box-shadow: rgb(0 0 0 / 40%) 0px 2px 6px 0px;
   padding: 30rpx;
   box-sizing: border-box;
   border-radius: 24rpx;
@@ -82,7 +81,7 @@
   align-items: center;
   justify-content: space-around;
   font-size: 26rpx;
-  margin-top: 20rpx;
+  margin-top: 40rpx;
 }
 
 .flex>view {

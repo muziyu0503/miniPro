@@ -6,7 +6,7 @@
      indicator-color='#000000'>
       <block wx:for="{{background}}" wx:key="index">
         <swiper-item>
-          <image mode='widthFix' src='http://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/banner/p{{index + 1}}.jpg'></image>
+          <image mode='aspectFill' src='http://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/banner/p{{index + 1}}.jpg'></image>
         </swiper-item>
       </block>
     </swiper>

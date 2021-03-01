@@ -155,7 +155,6 @@ App({
       }, 5000)
     }
     if (!this.globalData.openIdInfo) {
-      debugger
       // 未获取用户信息token
       // loadUser判断上个接口是否调用成功，成功=>下一个流程(感觉这样写不美观，不晓得怎么链式调用，要是有更好的方法，可以改)
       let code = await this._wxlogin()
