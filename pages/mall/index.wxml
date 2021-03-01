@@ -10,7 +10,7 @@
 		<view wx:for="{{goodList}}" wx:key="index" wx:for-item="arrItem" wx:for-index="arrIndex">
 			<view class="item" wx:for="{{arrItem}}" wx:key='arrIndex' bindtap="toDetail" data-id="{{index}},{{arrIndex}}">
 				<image src='{{item.img}}'></image>
-				<view>{{item.name}}</view>
+				<view class="name">{{item.name}}</view>
 				<text>{{item.points}} 积分</text>
 			</view>
 		</view>

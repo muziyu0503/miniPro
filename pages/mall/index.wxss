@@ -67,12 +67,15 @@ button {
   display: inline-block;
   margin-right: 30rpx;
   margin-bottom: 20rpx;
-  border-radius: 14rpx;
+  /* border-radius: 14rpx; */
   overflow: hidden;
-  box-shadow: 0rpx 4rpx 11rpx #cccccc;
+  /* box-shadow: 0rpx 4rpx 11rpx #cccccc; */
   padding-bottom: 20rpx;
 }
-
+.item .name {
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+}
 .item:nth-child(2n) {
   margin-right: 0;
 }
@@ -88,7 +91,7 @@ button {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  font-size: 28rpx;
+  font-size: 30rpx;
   color: #555;
   height: 60rpx;
   padding: 0 10rpx;
@@ -98,6 +101,6 @@ button {
 .item text {
   color: #ed4014;
   font-size: 30rpx;
-  padding: 0 10rpx;
+  padding: 0 20rpx;
   box-sizing: border-box;
 }
