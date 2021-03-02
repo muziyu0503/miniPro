@@ -1,9 +1,12 @@
 page {
   height: 100vh;
-  padding: 30rpx 30rpx 0 30rpx;
+  padding: 30rpx 0 0 0;
   box-sizing: border-box;
 }
-
+.p30 {
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
 .search {
   position: relative;
   display: flex;
@@ -42,6 +45,8 @@ button {
   border-radius: 50rpx;
   align-items: center;
   margin-bottom: 50rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
 }
 
 .search image {
@@ -60,12 +65,15 @@ button {
 .row {
   height: calc(100% - 90rpx - 50rpx);
 }
-
+.row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .item {
   font-size: 20rpx;
-  width: 330rpx;
+  width: 360rpx;
   display: inline-block;
-  margin-right: 30rpx;
   margin-bottom: 20rpx;
   /* border-radius: 14rpx; */
   overflow: hidden;
@@ -81,8 +89,8 @@ button {
 }
 
 .item image {
-  width: 330rpx;
-  height: 250rpx;
+  width: 100%;
+  height: 350rpx;
   margin-bottom: 5rpx;
 }
 
