@@ -26,13 +26,13 @@
 }
 
 .recommend {
-  height: 150rpx;
+  height: 125rpx;
   width: 32%;
   background: url('https://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/button/u%3D1448257146%2C587581063%26fm%3D26%26gp%3D0_01.png') no-repeat;
   background-size: 100% 100%;
   text-align: center;
   color: #ffffff;
-  line-height: 150rpx;
+  line-height: 125rpx;
   font-size: 36rpx;
   position: relative;
   box-shadow: 0rpx 8rpx 11rpx #cccccc;
@@ -61,7 +61,7 @@
   background-size: 100% 100%;
 }
 .ranktype {
-  background: url('https://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/button/u%3D1448257146%2C587581063%26fm%3D26%26gp%3D0_02.png');
+  background: url('https://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/button/u%3D1448257146%2C587581063%26fm%3D26%26gp%3D0_03.jpg');
   background-size: 100% 100%;
 }
 .btn {
