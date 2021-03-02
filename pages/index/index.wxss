@@ -1,6 +1,5 @@
 .containt {
-  padding: 30rpx;
-  box-sizing: border-box;
+ 
 }
 
 .swiper {
@@ -8,31 +7,56 @@
   /* border-radius: 10rpx; */
   overflow: hidden;
 }
-
+.p30 {
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
 .swiper image {
   width: 100%;
   height: 100%;
 }
 
 .btn-block {
-  margin-top: 20rpx;
+  margin-top: 40rpx;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .recommend {
   height: 200rpx;
-  width: 400rpx;
+  width: 30%;
   background: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1448257146,587581063&fm=26&gp=0.jpg');
   background-size: cover;
   text-align: center;
   color: #ffffff;
   line-height: 200rpx;
-  border-radius: 10rpx;
-  font-size: 40rpx;
+  font-size: 30rpx;
+  position: relative;
 }
-
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.2;
+  z-index: 1;
+}
+.recommend text {
+  z-index: 2;
+  position: relative;
+}
+.cartype {
+  background: url('http://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/banner/p2.jpg');
+  background-size: cover;
+}
+.ranktype {
+  background: url('http://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/banner/p3.jpg');
+  background-size: cover;
+}
 .btn {
   width: 270rpx;
 }
@@ -45,7 +69,6 @@
   padding: 27rpx;
   box-sizing: border-box;
   margin-bottom: 15rpx;
-  border-radius: 10rpx;
   font-size: 30rpx;
 }
 
@@ -80,13 +103,15 @@
 
 .row {
   margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .item {
   font-size: 20rpx;
-  width: 330rpx;
+  width: 360rpx;
   display: inline-block;
-  margin-right: 30rpx;
   margin-bottom: 20rpx;
   /* border-radius: 14rpx; */
   overflow: hidden;
@@ -103,7 +128,7 @@
 }
 
 .item image {
-  width: 330rpx;
+  width: 100%;
   height: 250rpx;
   margin-bottom: 5rpx;
 }

@@ -11,17 +11,26 @@
       </block>
     </swiper>
 
-    <view class="btn-block">
+    <view class="btn-block dis-flex">
       <view class="recommend" bindtap="toRecommend">
-        推荐有奖
+        <view class="mask"></view>
+        <text>推荐有奖</text>
       </view>
-      <view class="btn">
+      <view class="recommend cartype" bindtap="toH5">
+        <view class="mask"></view>
+        <text>查看车型</text>
+      </view>
+      <view class="recommend ranktype" bindtap="toRank">
+        <view class="mask"></view>
+        <text>积分排行榜</text>
+      </view>
+      <!-- <view class="btn">
         <view bindtap="toH5">查看车型</view>
         <view bindtap="toRank">积分排行榜</view>
-      </view>
+      </view> -->
     </view>
 
-    <view class="rank-header">
+    <view class="rank-header p30">
       <text>积分兑换</text>
       <view bindtap="toMall">查看全部 ></view>
     </view>
