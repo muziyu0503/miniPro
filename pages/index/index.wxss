@@ -61,7 +61,7 @@
   background-size: 100% 100%;
 }
 .ranktype {
-  background: url('https://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/button/u%3D1448257146%2C587581063%26fm%3D26%26gp%3D0_03.png');
+  background: url('https://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/button/u%3D1448257146%2C587581063%26fm%3D26%26gp%3D0_02.png');
   background-size: 100% 100%;
 }
 .btn {
