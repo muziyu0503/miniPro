@@ -26,14 +26,14 @@
 }
 
 .recommend {
-  height: 200rpx;
+  height: 150rpx;
   width: 32%;
   background: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1448257146,587581063&fm=26&gp=0.jpg');
   background-size: cover;
   text-align: center;
   color: #ffffff;
-  line-height: 200rpx;
-  font-size: 30rpx;
+  line-height: 150rpx;
+  font-size: 36rpx;
   position: relative;
   box-shadow: 0rpx 8rpx 11rpx #cccccc;
   border-radius: 8rpx;

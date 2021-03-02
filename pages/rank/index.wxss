@@ -32,6 +32,7 @@
 }
 .img{
   width: 135rpx;
+  text-align: left;
 }
 .rank>view view {
   vertical-align: middle;
