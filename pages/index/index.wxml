@@ -1,26 +1,29 @@
 <!--index.wxml-->
 <view class="containt">
   <scroll-view scroll-y>
-    <swiper class="swiper" autoplay indicator-dots
-    indicator-active-color='#ffffff'
-     indicator-color='#000000'>
-      <block wx:for="{{background}}" wx:key="index">
-        <swiper-item>
-          <image mode='aspectFill' src='http://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/banner/p{{index + 1}}.jpg'></image>
-        </swiper-item>
-      </block>
-    </swiper>
+    <view class='swiper-box'>
+      <swiper class="swiper" autoplay indicator-dots indicator-active-color='#ffffff' indicator-color='#000000'>
+        <block wx:for="{{background}}" wx:key="index">
+          <swiper-item>
+            <image mode='aspectFill'
+              src='http://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/banner/p{{index + 1}}.jpg'>
+            </image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <image class='logo' src='https://www.mercedes-benz.com.cn/content/dam/mb-cn/vehicles1/sedan/c-class-l-sport/renovation-footer/logo@3x.png'/>
+    </view>
 
     <view class="btn-block dis-flex">
-      <view class="recommend" bindtap="toRecommend">
+      <view class="recommend" bindtap="toRecommend" style="background: url(../../images/p3_01.jpg) no-repeat; background-size: 100% 100%;">
         <view class="mask"></view>
         <text>推荐有奖</text>
       </view>
-      <view class="recommend cartype" bindtap="toH5">
+      <view class="recommend cartype" bindtap="toH5" style="background: url(../../images/p3_02.jpg) no-repeat; background-size: 100% 100%;">
         <view class="mask"></view>
         <text>查看车型</text>
       </view>
-      <view class="recommend ranktype" bindtap="toRank">
+      <view class="recommend ranktype" bindtap="toRank" style="background: url(../../images/p3_03.jpg) no-repeat; background-size: 100% 100%;">
         <view class="mask"></view>
         <text>积分排行榜</text>
       </view>
@@ -35,11 +38,10 @@
       <view bindtap="toMall">查看全部 ></view>
     </view>
     <view class="row">
-      <view class="item" wx:for="{{rankList}}" wx:key='*this'
-      bindtap="toDetail" data-id='{{index}}'>
+      <view class="item" wx:for="{{rankList}}" wx:key='*this' bindtap="toDetail" data-id='{{index}}'>
         <image src='{{item.img}}'></image>
         <view class="name">{{item.name}}</view>
-        <text>{{item.points}} 积分</text>
+        <text><text>{{item.points}}</text> 积分</text>
       </view>
     </view>
   </scroll-view>

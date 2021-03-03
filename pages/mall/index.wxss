@@ -69,10 +69,12 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0 4px;
+  box-sizing: border-box;
 }
 .item {
   font-size: 20rpx;
-  width: 360rpx;
+  width: 355rpx;
   display: inline-block;
   margin-bottom: 20rpx;
   /* border-radius: 14rpx; */
@@ -90,7 +92,7 @@ button {
 
 .item image {
   width: 100%;
-  height: 350rpx;
+  height: 240rpx;
   margin-bottom: 5rpx;
 }
 
@@ -101,14 +103,15 @@ button {
   overflow: hidden;
   font-size: 30rpx;
   color: #555;
-  height: 60rpx;
+  max-height: 60rpx;
   padding: 0 10rpx;
-  margin-bottom: 10rpx;
 }
-
-.item text {
-  color: #ed4014;
+.item > text {
+  color: #000000;
   font-size: 30rpx;
+  margin-top: 10rpx;
   padding: 0 20rpx;
-  box-sizing: border-box;
+}
+.item > text text{
+  font-weight: bold;
 }
