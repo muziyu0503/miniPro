@@ -38,7 +38,7 @@ Page({
           icon: 'none',
           duration: 5000
         })
-        wx.hideLoading()
+        // wx.hideLoading()
       }
      
     }
