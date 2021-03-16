@@ -1,45 +1,45 @@
 <!--index.wxml-->
 <view class="containt">
-  <scroll-view scroll-y>
-    <view class='swiper-box'>
-      <swiper class="swiper" autoplay indicator-dots indicator-active-color='#ffffff' indicator-color='#000000'>
-        <block wx:for="{{background}}" wx:key="index">
-          <swiper-item>
-            <image mode='aspectFill'
-              src='http://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/banner/p{{index + 1}}.jpg'>
-            </image>
-          </swiper-item>
-        </block>
-      </swiper>
-      <image class='logo'
-        src='https://www.mercedes-benz.com.cn/content/dam/mb-cn/vehicles1/sedan/c-class-l-sport/renovation-footer/logo@3x.png' />
-    </view>
+  <view class='swiper-box'>
+    <swiper class="swiper" autoplay indicator-dots indicator-active-color='#ffffff' indicator-color='#000000'>
+      <block wx:for="{{background}}" wx:key="index">
+        <swiper-item>
+          <image mode='aspectFill'
+            src='http://benz-points-mall-1252428216.cos.ap-nanjing.myqcloud.com/images/banner/p{{index + 1}}.jpg'>
+          </image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <image class='logo'
+      src='https://www.mercedes-benz.com.cn/content/dam/mb-cn/vehicles1/sedan/c-class-l-sport/renovation-footer/logo@3x.png' />
+  </view>
 
-    <view class="btn-block dis-flex">
-      <view class="recommend" bindtap="toRecommend">
-        <view class="mask"></view>
-        <text>推荐有奖</text>
-      </view>
-      <view class="recommend cartype" bindtap="toH5">
-        <view class="mask"></view>
-        <text>查看车型</text>
-      </view>
-      <view class="recommend ranktype" bindtap="toRank">
-        <view class="mask"></view>
-        <text>积分排行榜</text>
-      </view>
+  <view class="btn-block dis-flex">
+    <view class="recommend" bindtap="toRecommend">
+      <view class="mask"></view>
+      <text>推荐有奖</text>
     </view>
+    <view class="recommend cartype" bindtap="toH5">
+      <view class="mask"></view>
+      <text>查看车型</text>
+    </view>
+    <view class="recommend ranktype" bindtap="toRank">
+      <view class="mask"></view>
+      <text>积分排行榜</text>
+    </view>
+  </view>
 
-    <view class="rank-header p30">
-      <text>积分兑换</text>
-      <view bindtap="toMall">查看全部 ></view>
+  <view class="rank-header p30">
+    <text>积分兑换</text>
+    <view bindtap="toMall">查看全部 ></view>
+  </view>
+  <scroll-view class="row" scroll-x scroll-anchoring="true" scroll-with-animation="true">
+    <view class="dis-flex session-tabs">
+      <view class="item" wx:for="{{rankList}}" wx:key='*this' bindtap="toDetail" data-id='{{index}}'>
+        <image mode="widthFix" src='{{item.img}}'></image>
+        <view class="name">{{item.name}}</view>
+        <text><text>{{item.points}}</text> 积分</text>
+      </view>
     </view>
-    <scroll-view scroll-x="true" class="row" scroll-with-animation="{{true}}">
-        <view class="item" wx:for="{{rankList}}" wx:key='*this' bindtap="toDetail" data-id='{{index}}'>
-          <image mode="widthFix" src='{{item.img}}'></image>
-          <view class="name">{{item.name}}</view>
-          <text><text>{{item.points}}</text> 积分</text>
-        </view>
-    </scroll-view>
   </scroll-view>
 </view>
