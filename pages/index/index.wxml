@@ -14,18 +14,18 @@
       src='https://www.mercedes-benz.com.cn/content/dam/mb-cn/vehicles1/sedan/c-class-l-sport/renovation-footer/logo@3x.png' />
   </view>
 
-  <view class="btn-block dis-flex">
+  <view class="btn-block">
     <view class="recommend" bindtap="toRecommend">
       <view class="mask"></view>
-      <text>推荐有奖</text>
+      <image class='car-index-ad' src="/images/car-index-ad1.png" />
     </view>
     <view class="recommend cartype" bindtap="toH5">
       <view class="mask"></view>
-      <text>查看车型</text>
+       <image class='car-index-ad' src="/images/car-index-ad2.png" />
     </view>
     <view class="recommend ranktype" bindtap="toRank">
       <view class="mask"></view>
-      <text>积分排行榜</text>
+      <image class='car-index-ad' src="/images/car-index-ad3.png" />
     </view>
   </view>
 

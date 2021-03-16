@@ -17,31 +17,24 @@
 }
 
 .btn-block {
-  margin-top: 20rpx;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 8rpx;
-  box-sizing: border-box;
+  margin-top: 37rpx;
 }
 
 .recommend {
-  height: 203rpx;
-  width: 235rpx;
-  color: #423a3a;
-  font-size: 36rpx;
+  width:710rpx;
+  height: 120rpx;
   position: relative;
-  border: 2rpx solid #423a3a;
-  border-radius: 8rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 25rpx;
 }
 
 .recommend::hover {
   opacity: 0.6;
 }
-
+.recommend image.car-index-ad {
+  width:710rpx;
+  height: 120rpx;
+}
 .mask {
   position: absolute;
   left: 0;
